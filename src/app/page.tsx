@@ -1,7 +1,16 @@
+import SectionTest from "@/components/sections/sectionTest";
+
+const SECTIONS = ["Home", "About", "Products", "Services", "Contact"];
 export default function Home() {
   return (
-    <h1 className="text-5xl font-bold text-red-500">
-      Harsh Bhardwaj 🚀
-    </h1>
+<>
+      {SECTIONS.map((section) => (
+        <div key={section} className="text-2xl text-blue-500">
+          <SectionTest/>
+        </div>
+      ))}
+</>
   );
 }
+
+
