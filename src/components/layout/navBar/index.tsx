@@ -47,21 +47,21 @@ export default function NavBar() {
 
         <a
           href="/#"
-          className="opacity-70 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
+          className="opacity-80 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
         >
           Blog
         </a>
 
         <a
           href="/#"
-          className="opacity-70 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
+          className="opacity-80 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
         >
           Projects
         </a>
 
         <a
           href="/#"
-          className="opacity-70 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
+          className="opacity-80 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
         >
           Contact
         </a>
