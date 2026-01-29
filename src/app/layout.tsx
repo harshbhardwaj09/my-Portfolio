@@ -7,12 +7,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html  lang="en" className="bg-[#18181b]">
-      <body className="dark:bg-blue">
-        <div className="px-4 sm:px-6 lg:px-80">
-        <Navbar />
-        <main className="min-h-screen bg-blue">{children}</main>
-        <Footer />
+    <html lang="en" className="bg-[#18181b]">
+      <body>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
         </div>
       </body>
     </html>
