@@ -2,6 +2,7 @@
 
 import { SunMedium, MoonStar } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
+import { ResumeButton } from "./ResumeButton";
 
 export default function NavBar() {
   const [dark, setDark] = useState(true);
@@ -27,18 +28,20 @@ export default function NavBar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 flex justify-end my-4 p-4">
+    // <header className="sticky top-0 z-50 flex justify-center">
+    <header className="sticky top-0 z-50 flex justify-between items-center px-6 py-4">
+      <ResumeButton />
       <div
         className="
           inline-flex items-center gap-10
-          px-10 py-3
+          px-10 py-2.5
           text-base md:text-lg font-semibold
           text-white
           bg-[#191514]/60
           backdrop-blur-md
-          border-[1.5px] border-white/70
+          border-[1.5px] border-teal-400/60
           rounded-full
-          shadow-[1px_1px_8px_rgba(255,255,255,0.3),-1px_1px_8px_rgba(255,255,255,0.4)]
+          shadow-[1px_1px_8px_teal,-1px_1px_8px_teal-400/60]
         "
       >
         <a href="/#" className="text-teal-400 cursor-pointer whitespace-nowrap">
