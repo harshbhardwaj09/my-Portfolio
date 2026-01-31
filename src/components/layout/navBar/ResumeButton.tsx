@@ -4,14 +4,14 @@ export const ResumeButton = () => (
     target="_blank"
     rel="noopener noreferrer"
     className="
-  opacity-80 
+  opacity-90 hover:opacity-100 
     px-10 py-3
     rounded-xl
     text-base md:text-lg font-semibold
       text-white/80
       hover:text-white
     bg-[#191514]/60
-    border border-teal-400/60
+    border border-teal-400/80
     shadow-[0_6px_0_#0d9488]
     -translate-y-[3px]
     hover:translate-y-[-1px]
