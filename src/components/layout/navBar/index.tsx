@@ -29,9 +29,11 @@ export default function NavBar() {
 
   return (
     // <header className="sticky top-0 z-50 flex justify-center">
-    <header className="sticky top-0 z-50 relative flex justify-between items-center px-6 pt-4 pb-10 backdrop-blur-md">
+ <header className="sticky top-0 z-50 relative flex justify-between items-center px-6 pt-4 pb-10 backdrop-blur-md bg-black/85">
+
+      
       <span
-        className="
+        className={`
     pointer-events-none
     absolute bottom-0 left-1/2 -translate-x-1/2
     w-[130%]
@@ -40,9 +42,8 @@ export default function NavBar() {
     from-transparent
     via-teal-400/60 via-[40%]
     to-transparent
-    blur-[1.3px]
-    shadow-[0_0_6px_rgba(45,212,191,0.6)]
-  "
+    blur-[.7px]
+  `}
       />
       <ResumeButton />
       <div
