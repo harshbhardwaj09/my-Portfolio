@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <div className="min-h-screen px-10 pt-10 flex justify-center">
       <div className="text-white text-center max-w-3xl">
-
         <FadeUp>
           <h1 className="text-5xl md:text-8xl font-bold leading-tight">
             Harsh Bhardwaj
@@ -18,10 +17,10 @@ export default function Home() {
         </FadeUp>
 
         <FadeUp delay={200}>
-          <p className="mt-6 text-white/80 text-2xl leading-relaxed">
-            I build clean, scalable, and performant web applications using modern
-            technologies. I focus on creating great user experiences with solid
-            frontend and backend foundations.
+          <p className="mt-6 text-white/85 text-2xl leading-relaxed">
+            I build clean, scalable, and performant web applications using
+            modern technologies. I focus on creating great user experiences with
+            solid frontend and backend foundations.
           </p>
         </FadeUp>
 
@@ -30,7 +29,6 @@ export default function Home() {
             React • Next.js • TypeScript • Node.js
           </p>
         </FadeUp>
-
       </div>
     </div>
   );
