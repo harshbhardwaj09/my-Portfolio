@@ -29,9 +29,7 @@ export default function NavBar() {
 
   return (
     // <header className="sticky top-0 z-50 flex justify-center">
- <header className="sticky top-0 z-50 relative flex justify-between items-center px-6 pt-4 pb-10 backdrop-blur-md bg-black/85">
-
-      
+    <header className="sticky top-0 z-50 relative flex justify-between items-center px-6 pt-4 pb-10 backdrop-blur-md bg-black/85">
       <span
         className={`
     pointer-events-none
