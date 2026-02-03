@@ -1,11 +1,7 @@
 "use client";
 import { useEffect, useState, ReactNode } from "react";
 
-export default function MagneticText({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function MagneticText({ children }: { children: ReactNode }) {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -25,7 +21,7 @@ export default function MagneticText({
       <span
         className={`
           absolute inset-0
-          bg-gradient-to-r from-transparent via-teal-400/40 to-transparent
+          bg-gradient-to-r from-transparent via-teal-400/20 to-transparent
           blur-xl
           transition-opacity duration-700
           ${active ? "opacity-100" : "opacity-0"}

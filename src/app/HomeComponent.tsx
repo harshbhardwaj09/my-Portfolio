@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Blogs } from "./Blogs";
 
 export default function HomeComponent() {
   const [show, setShow] = useState(false);
@@ -11,10 +12,8 @@ export default function HomeComponent() {
 
   return (
     <div className="min-h-screen px-10 pt-10 flex gap-20">
-
       {/* LEFT — TEXT */}
       <div className="flex-1 max-w-3xl pl-16">
-        
         <h1
           className={`
             text-6xl md:text-8xl font-bold leading-tight
@@ -45,7 +44,6 @@ export default function HomeComponent() {
         >
           Full Stack Developer
         </h2>
-        
 
         <p
           className={`
@@ -81,7 +79,6 @@ export default function HomeComponent() {
           />
         </div>
       </div>
-
     </div>
   );
 }
