@@ -1,3 +1,4 @@
+"use client"
 import Appear from "@/components/animation/Appear";
 import MagneticText from "@/components/animation/MagneticText";
 import Image from "next/image";
@@ -20,6 +21,7 @@ import {
   SiMongodb,
   SiExpress,
 } from "react-icons/si";
+import { ProjectsComponent } from "./ProjectsComponent";
 const techs = [
   { name: "React", icon: SiReact, color: "#61DAFB" },
   { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
@@ -183,14 +185,24 @@ export default function Home() {
       </div>
       <h2
         className={`
-              mt-8 text-5xl font-extrabold text-white/10
+              mt-8 text-5xl font-extrabold text-white
               cursor-default
-              [-webkit-text-stroke:.3px_white]
+           
             `}
       >
         Recent Blogs
       </h2>
       <Blogs />
+           <h2
+        className={`
+              mt-8 text-5xl font-extrabold text-white
+              cursor-default
+            `}
+      >
+        Projects
+      </h2>
+      <ProjectsComponent/>
+
     </div>
   );
 }
