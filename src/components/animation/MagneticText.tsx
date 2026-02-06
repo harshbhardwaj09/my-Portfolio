@@ -18,16 +18,7 @@ export default function MagneticText({ children }: { children: ReactNode }) {
       `}
     >
       {/* glow layer */}
-      <span
-        className={`
-          absolute inset-0
-          bg-gradient-to-r from-transparent via-teal-400/20 to-transparent
-          blur-xl
-          transition-opacity duration-700
-          ${active ? "opacity-100" : "opacity-0"}
-        `}
-      />
-      <span className="relative">{children}</span>
+      {children}
     </div>
   );
 }

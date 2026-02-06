@@ -2,8 +2,8 @@
 
 import { Folder, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 
-/* PROJECT DATA */
 const projects = [
   {
     title: "Integrating Algolia Search",
@@ -37,7 +37,7 @@ const projects = [
 
 export const ProjectsComponent = () => {
   return (
-    <section className="mt-24 max-w-6xl ml mr-64 px-4">
+    <section className="my-10 w-full max-w-5xl">
       {/* GRID — 2 PER ROW */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
@@ -45,22 +45,22 @@ export const ProjectsComponent = () => {
             key={index}
             className="
               group
-              relative
-              rounded-xlā
-              bg-bg-white/5
+              rounded-xl
+              bg-white/5
               border border-white/10
               p-6
               min-h-[230px]
 
-              shadow-[0_10px_30px_rgba(0,0,0,0.6)]
+              shadow-[25px_25px_20px_rgba(0,0,0,0.75)]
               transition-all duration-500 ease-out
               hover:-translate-y-[6px]
-              hover:shadow-[0_25px_60px_rgba(0,0,0,0.85)]
+              hover:shadow-[35px_35px_20px_rgba(0,0,0,0.9)]
+            hover:bg-white/15
+
             "
           >
-            {/* TOP ROW */}
+            {/* TOP */}
             <div className="flex items-center justify-between mb-6">
-              {/* FOLDER ICON */}
               <Folder
                 size={34}
                 className="
@@ -70,21 +70,17 @@ export const ProjectsComponent = () => {
                 "
               />
 
-              {/* LINKS */}
               <div className="flex items-center gap-4 text-white/60">
                 <a
                   href={project.github}
                   target="_blank"
-                  aria-label="GitHub Repository"
                   className="hover:text-white transition"
                 >
                   <FaGithub size={18} />
                 </a>
-
                 <a
                   href={project.live}
                   target="_blank"
-                  aria-label="Live Project"
                   className="hover:text-white transition"
                 >
                   <ExternalLink size={18} />
@@ -92,37 +88,19 @@ export const ProjectsComponent = () => {
               </div>
             </div>
 
-            {/* TITLE */}
-            <h3
-              className="
-                text-xl font-semibold
-                text-white/90
-                mb-3
-                transition-colors duration-300
-                group-hover:text-teal-300
-                cursor-default
-              "
-            >
+            <h3 className="text-xl font-semibold text-white/90 mb-3">
               {project.title}
             </h3>
 
-            {/* DESCRIPTION */}
-            <p className="text-sm text-white/60 leading-relaxed mb-6 cursor-default">
+            <p className="text-sm text-white/60 leading-relaxed mb-6">
               {project.desc}
             </p>
 
-            {/* TECH STACK */}
             <div className="flex flex-wrap gap-3 text-xs font-medium">
               {project.tech.map((tech) => (
                 <span
                   key={tech}
-                  className="
-                    text-white/50
-                    tracking-wide
-                    transition-colors duration-300
-                    group-hover:text-white/80
-                    cursor-default
-                  "
+                  className="text-white/50 group-hover:text-white/80 transition-colors"
                 >
                   {tech}
                 </span>
@@ -131,6 +109,43 @@ export const ProjectsComponent = () => {
           </div>
         ))}
       </div>
+      <div className="flex justify-center mt-16 items-center gap-2 cursor-pointer group/view">
+        <span
+          className="
+              relative
+              text-base font-medium text-white/70
+              transition-colors duration-300
+              group-hover/view:text-white
+
+              after:content-['']
+              after:absolute
+              after:left-0
+              after:-bottom-1
+              after:h-[1px]
+              after:w-full
+              after:bg-white
+              after:scale-x-0
+              after:origin-left
+              after:transition-transform
+              after:duration-300
+              group-hover/view:after:scale-x-100
+            "
+        >
+          View more projects
+        </span>
+
+        <ArrowRight
+          size={18}
+          className="
+              text-white/70
+              transition-all duration-300
+              group-hover/view:text-white
+              group-hover/view:translate-x-1
+            "
+        />
+      </div>
+
+      {/* VIEW ALL PROJECTS */}
     </section>
   );
 };
