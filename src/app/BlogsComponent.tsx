@@ -1,13 +1,13 @@
 import { ArrowRight, Heart } from "lucide-react";
 
-export const Blogs = () => {
+export const BlogsComponent = () => {
   const blogTitle =
     "How to freelance and make money as a Freelance Web Developer – A practical guide.";
 
   const likes = [124, 89, 256];
 
   return (
-    <div className="mt-14 w-full max-w-5xl flex flex-col gap-6">
+    <div className="my-10 w-full max-w-5xl flex flex-col gap-6">
       {[blogTitle, blogTitle, blogTitle].map((title, index) => (
         <div
           key={index}
@@ -15,10 +15,12 @@ export const Blogs = () => {
             group relative
             p-6 rounded-xl
             bg-white/5
+            shadow-[25px_25px_20px_rgba(0,0,0,0.75)]
             border border-white/10
             transition-all duration-500
             hover:-translate-y-[2px]
-            hover:bg-white/8
+                hover:shadow-[35px_35px_20px_rgba(0,0,0,0.9)]
+            hover:bg-white/15
           "
         >
           {/* LEFT RAIL */}
@@ -83,10 +85,9 @@ export const Blogs = () => {
       ))}
 
       {/* VIEW MORE BLOGS */}
-      <div className="mt-8 flex justify-center">
-        <div className="inline-flex items-center gap-2 cursor-pointer group/view">
-          <span
-            className="
+      <div className="flex justify-center mt-8 items-center gap-2 cursor-pointer group/view">
+        <span
+          className="
               relative
               text-base font-medium text-white/70
               transition-colors duration-300
@@ -105,20 +106,19 @@ export const Blogs = () => {
               after:duration-300
               group-hover/view:after:scale-x-100
             "
-          >
-            View more blogs
-          </span>
+        >
+          View more blogs
+        </span>
 
-          <ArrowRight
-            size={18}
-            className="
+        <ArrowRight
+          size={18}
+          className="
               text-white/70
               transition-all duration-300
               group-hover/view:text-white
               group-hover/view:translate-x-1
             "
-          />
-        </div>
+        />
       </div>
     </div>
   );
