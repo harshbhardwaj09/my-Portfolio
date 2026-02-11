@@ -1,15 +1,11 @@
 "use client";
 
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const socials = [
-    {
+  {
     icon: MdEmail,
     link: "mailto:harshbhardwaj3009@gmail.com",
     label: "Email",
@@ -38,8 +34,7 @@ const socials = [
     link: "https://instagram.com",
     label: "Instagram",
     color: "#E1306C",
-  }
-
+  },
 ];
 
 export default function SideSocials() {
@@ -47,7 +42,6 @@ export default function SideSocials() {
     <>
       {/* LEFT SIDE SOCIAL STACK */}
       <div className="hidden lg:flex fixed left-6 top-1/2 -translate-y-1/2 z-50 flex-col gap-6">
-
         {socials.map(({ icon: Icon, link, label, color }, index) => (
           <a
             key={index}
@@ -81,7 +75,8 @@ export default function SideSocials() {
 
             {/* Subtle glow only for X */}
             {label === "X" && (
-              <span className="
+              <span
+                className="
                 absolute inset-0
                 rounded-xl
                 blur-lg
@@ -89,7 +84,8 @@ export default function SideSocials() {
                 group-hover:opacity-40
                 bg-white
                 transition duration-500
-              " />
+              "
+              />
             )}
 
             {/* Drawer Label */}

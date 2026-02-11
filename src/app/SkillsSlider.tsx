@@ -52,23 +52,22 @@ export const SkillsSlider = () => {
           "
         >
           {/* GLASS REFLECTION */}
-          <span className="
+          <span
+            className="
             absolute inset-0
             rounded-xl
             bg-gradient-to-t from-white/10 to-transparent
             opacity-0
             group-hover:opacity-100
             transition duration-500
-          " />
+          "
+          />
 
           {/* ICON */}
           <Icon size={22} color={color} />
 
           {/* TEXT */}
-          <span
-            style={{ color }}
-            className="font-medium tracking-wide"
-          >
+          <span style={{ color }} className="font-medium tracking-wide">
             {name}
           </span>
 

@@ -52,18 +52,18 @@ export default function RootLayout({
     // //         bg-cover
     // //         bg-center
     // //         bg-no-repeat">
-  //   <html
-  //     lang="en"
-  //     className="
-  //   bg-gradient-to-br
-  //    from-black
-  //   via-zinc-900
-  //    to-neutral-950
-  //    bg-fixed
-  // "
-  //   >
+    //   <html
+    //     lang="en"
+    //     className="
+    //   bg-gradient-to-br
+    //    from-black
+    //   via-zinc-900
+    //    to-neutral-950
+    //    bg-fixed
+    // "
+    //   >
 
-  <html lang="en" className="bg-fixed bg-black/95">
+    <html lang="en" className="bg-fixed bg-black/95">
       <body className={poppins.className}>
         <SideSocials />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">

@@ -1,19 +1,15 @@
 "use client";
 
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 const socials = [
-      {
-      icon: MdEmail,
-      link: "mailto:harshbhardwaj3009@gmail.com",
-      color: "#14b8a6", // theme match subtle teal
-    },
+  {
+    icon: MdEmail,
+    link: "mailto:harshbhardwaj3009@gmail.com",
+    color: "#14b8a6", // theme match subtle teal
+  },
   {
     icon: FaGithub,
     link: "https://github.com/harshbhardwaj09",
@@ -41,21 +37,19 @@ export default function Footer() {
 
   return (
     <footer className="pt-10 pb-2 w-full max-w-5xl ml-0 md:ml-4">
-
-      <div className="max-w-5xl mx-auto  py-4 text-center
+      <div
+        className="max-w-5xl mx-auto  py-4 text-center
     bg-gradient-to-r
     from-transparent
     via-teal-400/60 via-[40%]
-    to-transparent">
-
+    to-transparent"
+      >
         {/* TEXT */}
-            {/* MAIN TEXT */}
+        {/* MAIN TEXT */}
         <p className="text-white/60 text-md tracking-wide">
           Designed & Built by{" "}
-          <span className="font-semibold text-white">
-            Harsh Bhardwaj
-          </span>{" "}
-          © {year}
+          <span className="font-semibold text-white">Harsh Bhardwaj</span> ©{" "}
+          {year}
         </p>
 
         {/* WORK LINE */}
@@ -104,7 +98,6 @@ export default function Footer() {
             </a>
           ))}
         </div>
-
       </div>
     </footer>
   );
