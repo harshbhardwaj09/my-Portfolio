@@ -37,7 +37,7 @@ const projects = [
 
 export const ProjectsComponent = () => {
   return (
-    <section className="my-10 w-full max-w-5xl">
+    <section className="my-10 w-fullml-8 max-w-5xl">
       {/* GRID — 2 PER ROW */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (

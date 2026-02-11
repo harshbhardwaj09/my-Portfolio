@@ -7,7 +7,7 @@ export const BlogsComponent = () => {
   const likes = [124, 89, 256];
 
   return (
-    <div className="my-10 w-full max-w-5xl flex flex-col gap-6">
+    <div className="my-10 w-full ml-8ml-8 max-w-5xl flex flex-col gap-6">
       {[blogTitle, blogTitle, blogTitle].map((title, index) => (
         <div
           key={index}
