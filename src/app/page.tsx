@@ -13,7 +13,7 @@ export default function Home() {
     "
     >
       <AboutComponent />
- <h2 className={headingStyling}>Recent Blogs</h2>
+      <h2 className={headingStyling}>Recent Blogs</h2>
       <BlogsComponent />
       <h2 className={headingStyling}>Recent Projects</h2>
       <ProjectsComponent />

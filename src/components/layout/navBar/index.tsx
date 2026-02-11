@@ -28,84 +28,82 @@ export default function NavBar() {
   };
 
   return (
-    <></>
-    // <header className="sticky top-0 z-50 flex justify-center">
-  //   <header className="sticky top-0 z-50 relative flex justify-between items-center px-6 pt-4 pb-10 backdrop-blur-md">
-  //     <span
-  //       className={`
-  //   pointer-events-none
-  //   absolute bottom-0 left-1/2 -translate-x-1/2
-  //   w-[130%]
-  //   h-[1px]
-  //   bg-gradient-to-r
-  //   from-transparent
-  //   via-teal-400/60 via-[40%]
-  //   to-transparent
-  //   blur-[.7px]
-  // `}
-  //     />
-  //     <ResumeButton />
-  //     <div
-  //       className="
-  //         inline-flex items-center gap-10
-  //         px-10 py-2.5
-  //         text-base md:text-lg font-semibold
-  //         text-white
-  //         bg-[#191514]/60
-  //         backdrop-blur-md
-  //         border-[1.5px] border-teal-400/60
-  //         rounded-full
-  //         shadow-[1px_1px_8px_teal,-1px_1px_8px_teal-400/60]
-  //       "
-  //     >
-  //       <a
-  //         href="/#"
-  //         className="text-teal-400  cursor-pointer whitespace-nowrap"
-  //       >
-  //         Home
-  //       </a>
+    <header className="sticky top-0 z-50 relative flex justify-between items-center px-6 pt-4 pb-10 backdrop-blur-md">
+      <span
+        className={`
+    pointer-events-none
+    absolute bottom-0 left-1/2 -translate-x-1/2
+    w-[130%]
+    h-[1px]
+    bg-gradient-to-r
+    from-transparent
+    via-teal-400/60 via-[40%]
+    to-transparent
+    blur-[.7px]
+  `}
+      />
+      <ResumeButton />
+      <div
+        className="
+          inline-flex items-center gap-10
+          px-10 py-2.5
+          text-base md:text-lg font-semibold
+          text-white
+          bg-[#191514]/60
+          backdrop-blur-md
+          border-[1.5px] border-teal-400/60
+          rounded-full
+          shadow-[1px_1px_8px_teal,-1px_1px_8px_teal-400/60]
+        "
+      >
+        <a
+          href="/#"
+          className="text-teal-400  cursor-pointer whitespace-nowrap"
+        >
+          Home
+        </a>
 
-  //       <a
-  //         href="/#"
-  //         className="opacity-80 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
-  //       >
-  //         Blog
-  //       </a>
+        <a
+          href="/#"
+          className="opacity-80 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
+        >
+          Blog
+        </a>
 
-  //       <a
-  //         href="/#"
-  //         className="opacity-80 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
-  //       >
-  //         Projects
-  //       </a>
+        <a
+          href="/#"
+          className="opacity-80 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
+        >
+          Projects
+        </a>
 
-  //       <a
-  //         href="/#"
-  //         className="opacity-80 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
-  //       >
-  //         Contact
-  //       </a>
+        <a
+          href="/#"
+          className="opacity-80 hover:opacity-100 cursor-pointer whitespace-nowrap transition"
+        >
+          Contact
+        </a>
 
-  //       {/* 🌙 / 🌞 Toggle button */}
-  //       <button
-  //         onClick={handleToggle}
-  //         className="
-  //           w-10 h-10
-  //           flex items-center justify-center
-  //           rounded-full
-  //           border border-white/40
-  //           bg-white/80
-  //           hover:bg-white/100
-  //           transition
-  //         "
-  //       >
-  //         {dark ? (
-  //           <SunMedium size={20} color="teal" />
-  //         ) : (
-  //           <MoonStar size={20} color="teal" />
-  //         )}
-  //       </button>
-  //     </div>
-  //   </header>
+        {/* 🌙 / 🌞 Toggle button */}
+        <button
+          onClick={handleToggle}
+          className="
+            w-10 h-10
+            flex items-center justify-center
+            rounded-full
+            border border-white/40
+            bg-white/80
+            hover:bg-white/100
+            transition
+          "
+        >
+          {dark ? (
+            <SunMedium size={20} color="teal" />
+          ) : (
+            <MoonStar size={20} color="teal" />
+          )}
+        </button>
+      </div>
+    </header>
   );
 }
