@@ -1,98 +1,75 @@
-import Appear from "@/components/animation/Appear";
-import MagneticText from "@/components/animation/MagneticText";
-import Image from "next/image";
-import { SkillsComponents } from "./SkillsComponent";
-/* common hover utility (so repeat na ho) */
-const textHover =
-  "hover:scale-[1.02] transition-transform duration-500 ease-out";
+"use client";
+
+import { useEffect, useState } from "react";
+import { SkillsSlider } from "./SkillsSlider";
 
 export const AboutComponent = () => {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setShow(true);
+  }, []);
+
   return (
-    <div className="my-10 flex gap-20">
-      {/* LEFT — TEXT */}
-      <div className="flex-1 text-white max-w-3xl pt-8">
-        <MagneticText>
-          <h1
-            className={`
-              text-7xl md:text-8xl font-extrabold leading-tight
-              ${textHover}
-              cursor-default
-              text-white/80 [text-shadow:15px_15px_5px_black]
+    <div className="my-10 w-full max-w-5xl bordr border-white/10 rounded-xl">
+    <div className="relative flex justify-center">
 
-            `}
-          >
-            Harsh
-          </h1>
-        </MagneticText>
+      {/* WIDTH SAME AS BLOG SECTION */}
+      <div className="w-full max-w-5xl px-4 text-center relative overflow-hidden">
 
-        <MagneticText>
-          <h1
-            className={`
-              text-7xl md:text-8xl font-extrabold leading-tight
-              ${textHover}
-              cursor-default
-            text-white/80 [text-shadow:15px_15px_5px_black]
+        {/* HUGE FAINT BACKGROUND TEXT */}
+        <h1 className="absolute inset-0 flex items-start justify-center text-[140px] md:text-[220px] font-black text-white/5 select-none pointer-events-none tracking-tight">
+          HARSH
+        </h1>
 
-            `}
-          >
-            Bhardwaj
-          </h1>
-        </MagneticText>
-
-        <MagneticText>
-          <h2
-            className={`
-              mt-4 text-4xl text-teal-200 font-bold
-              ${textHover}
-              cursor-default
-            `}
-          >
-            Full Stack Developer
-          </h2>
-        </MagneticText>
-
-        <p
+        {/* MAIN NAME */}
+        <h2
           className={`
-            mt-6 text-xl text-white/80 max-w-2xl
-            ${textHover}
-            cursor-default
+            relative
+            text-5xl md:text-8xl
+            font-black
+            tracking-tight
+            bg-gradient-to-r
+            from-white
+            via-teal-300
+            to-white
+            bg-[length:200%_200%]
+            animate-gradientMove
+            text-transparent
+            bg-clip-text
+            transition-all duration-1000 ease-out
+            ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
           `}
         >
-          I build clean, scalable, and performant clean, scalabl web
-          applications with strong focus on user experience and modern frontend
-          systems pplications with strong.I build clean, scalable, and
-          performant clean, scalabl web applications.
-        </p>
-        <h2
-          className={
-            "mt-8 text-5xl font-extrabold text-white/80 [text-shadow:15px_15px_7px_black]"
-          }
-        >
-          Technical Skills
+          Harsh Bhardwaj
         </h2>
-        <SkillsComponents />
-      </div>
 
-      {/* RIGHT — IMAGE */}
-      <div className="flex-1 flex justify-center">
-        <Appear delay={200}>
-          <div className="relative w-96 h-96">
-            <Image
-              src="/dev3.png"
-              alt="Profile"
-              fill
-              className="
-                object-contain
-                drop-shadow-[2px_2px_1px_teal]
-                hover:drop-shadow-[4px_4px_10px_teal]
-                transition-[filter]
-                duration-[1000ms]
-                ease-out
-              "
-            />
-          </div>
-        </Appear>
+        {/* ROLE */}
+        <p
+          className={`mt-6 text-xl md:text-2xl text-teal-200 transition-all duration-1000 delay-200 ${
+            show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+        >
+          Full Stack Developer
+        </p>
+
+        {/* DESCRIPTION */}
+        <p
+          className={`mt-8 mx-auto max-w-2xl text-lg text-teal-100 leading-relaxed transition-all duration-1000 delay-400 ${
+            show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}
+        >
+          I design and build scalable, high-performance web applications
+          with modern frontend architecture and clean backend systems.
+        </p>
+
+        {/* SKILLS SLIDER */}
+        <div className="mt-16">
+          <SkillsSlider />
+        </div>
+
       </div>
+    </div>
     </div>
   );
 };

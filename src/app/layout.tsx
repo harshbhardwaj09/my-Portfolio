@@ -1,6 +1,13 @@
 import Footer from "../components/layout/footer";
 import "../../global.css";
 import Navbar from "../components/layout/navBar";
+import SideSocials from "./SideSocials";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "900"],
+});
 export default function RootLayout({
   children,
 }: {
@@ -45,18 +52,20 @@ export default function RootLayout({
     // //         bg-cover
     // //         bg-center
     // //         bg-no-repeat">
+  //   <html
+  //     lang="en"
+  //     className="
+  //   bg-gradient-to-br
+  //    from-black
+  //   via-zinc-900
+  //    to-neutral-950
+  //    bg-fixed
+  // "
+  //   >
 
-    <html
-      lang="en"
-      className="
-    bg-gradient-to-br
-    from-black
-    via-zinc-900
-    to-neutral-950
-    bg-fixed
-  "
-    >
-      <body>
+  <html lang="en" className="bg-fixed bg-black/95">
+      <body className={poppins.className}>
+        <SideSocials />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
           <Navbar />
           <main>{children}</main>
