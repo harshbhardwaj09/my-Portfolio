@@ -3,7 +3,7 @@ import { ProjectsComponent } from "./ProjectsComponent";
 import { AboutComponent } from "./AboutComponent";
 import { GithubContributeComponent } from "./GithubContributeComponent";
 import { FaBlog, FaProjectDiagram, FaRProject } from "react-icons/fa";
-const headingStyling = `mt-10 text-5xl font-extrabold text-teal-200 [text-shadow:15px_15px_7px_black]`;
+const headingStyling = `mt-10 text-5xl   ml-0 md:ml-8 font-extrabold text-teal-200 [text-shadow:15px_15px_7px_black]`;
 
 export default function Home() {
   return (

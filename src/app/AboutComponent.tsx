@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SkillsSlider } from "./SkillsSlider";
+import { Skills } from "./Skills";
 
 export const AboutComponent = () => {
   const [show, setShow] = useState(false);
@@ -63,7 +63,7 @@ export const AboutComponent = () => {
 
           {/* SKILLS SLIDER */}
           <div className="mt-16">
-            <SkillsSlider />
+            < Skills  />
           </div>
         </div>
       </div>

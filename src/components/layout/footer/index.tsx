@@ -36,7 +36,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="pt-10 pb-2 w-full max-w-5xl ml-0 md:ml-4">
+    <footer className="pt-10 pb-2 w-full max-w-5xl ml-0 md:ml-12">
       <div
         className="max-w-5xl mx-auto  py-4 text-center
     bg-gradient-to-r
