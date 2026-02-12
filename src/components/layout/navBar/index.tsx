@@ -64,18 +64,19 @@ export default function NavBar() {
       <header className="sticky top-0 z-50 relative flex justify-between items-center pb-4 pt-2 md:px-6  md:pb-10 md:pt-4 backdrop-blur-md ">
 
         {/* Bottom Glow Line */}
-        <span
-          className="
-            pointer-events-none
-            absolute bottom-0 left-1/2 -translate-x-1/2
-            w-[130%] h-[1px]
-            bg-gradient-to-r
-            from-transparent
-            via-teal-400/60 via-[40%]
-            to-transparent
-            blur-[.7px]
-          "
-        />
+ <span
+  className="
+    pointer-events-none
+    absolute bottom-0 left-1/2 -translate-x-1/2
+    w-full h-[1px]
+    bg-gradient-to-r
+    from-transparent
+    via-teal-400/60 via-[40%]
+    to-transparent
+    blur-[.7px]
+  "
+/>
+
 
         {/* ================= DESKTOP ================= */}
         <div className="hidden md:flex justify-between items-center w-full">
