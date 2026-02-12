@@ -82,7 +82,7 @@ export default function SideSocials() {
                 blur-lg
                 opacity-0
                 group-hover:opacity-40
-                bg-white
+                bg-x
                 transition duration-500
               "
               />
