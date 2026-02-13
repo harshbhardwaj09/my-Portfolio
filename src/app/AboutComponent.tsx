@@ -63,7 +63,7 @@ export const AboutComponent = () => {
 
           {/* SKILLS SLIDER */}
           <div className="mt-16">
-            < Skills  />
+            <Skills />
           </div>
         </div>
       </div>
