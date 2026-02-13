@@ -62,10 +62,9 @@ export default function NavBar() {
   return (
     <>
       <header className="sticky top-0 z-50 relative flex justify-between items-center pb-4 pt-2 md:px-6  md:pb-10 md:pt-4 backdrop-blur-md ">
-
         {/* Bottom Glow Line */}
- <span
-  className="
+        <span
+          className="
     pointer-events-none
     absolute bottom-0 left-1/2 -translate-x-1/2
     w-full h-[1px]
@@ -75,8 +74,7 @@ export default function NavBar() {
     to-transparent
     blur-[.7px]
   "
-/>
-
+        />
 
         {/* ================= DESKTOP ================= */}
         <div className="hidden md:flex justify-between items-center w-full">
@@ -95,14 +93,34 @@ export default function NavBar() {
               shadow-[1px_1px_8px_teal,-1px_1px_8px_teal-400/60]
             "
           >
-            <a href="/#" className="text-teal-400 cursor-pointer whitespace-nowrap">Home</a>
-            <a href="/#" className="opacity-80 cursor-pointer hover:opacity-100 transition">Blog</a>
-            <a href="/#" className="opacity-80 cursor-pointer hover:opacity-100 transition">Projects</a>
-            <a href="/#" className="opacity-80 cursor-pointer hover:opacity-100 transition">Contact</a>
+            <a
+              href="/#"
+              className="text-teal-400 cursor-pointer whitespace-nowrap"
+            >
+              Home
+            </a>
+            <a
+              href="/#"
+              className="opacity-80 cursor-pointer hover:opacity-100 transition"
+            >
+              Blog
+            </a>
+            <a
+              href="/#"
+              className="opacity-80 cursor-pointer hover:opacity-100 transition"
+            >
+              Projects
+            </a>
+            <a
+              href="/#"
+              className="opacity-80 cursor-pointer hover:opacity-100 transition"
+            >
+              Contact
+            </a>
 
-             <button
-          onClick={handleToggle}
-          className="
+            <button
+              onClick={handleToggle}
+              className="
             w-10 h-10
             flex items-center justify-center
             rounded-full
@@ -111,7 +129,7 @@ export default function NavBar() {
             hover:bg-white/100
             transition
           "
-        >
+            >
               {dark ? (
                 <SunMedium size={20} color="teal" />
               ) : (
@@ -121,32 +139,24 @@ export default function NavBar() {
           </div>
         </div>
 
-{/* ================= MOBILE ================= */}
-<div className="flex md:hidden items-center justify-between w-full px-4">
+        {/* ================= MOBILE ================= */}
+        <div className="flex md:hidden items-center justify-between w-full px-4">
+          {/* Theme Toggle */}
+          <button
+            onClick={handleToggle}
+            className="w-10 h-10 flex items-center justify-center text-teal-400 ml-2"
+          >
+            {dark ? <SunMedium size={26} /> : <MoonStar size={26} />}
+          </button>
 
-  {/* Theme Toggle */}
-  <button
-    onClick={handleToggle}
-    className="w-10 h-10 flex items-center justify-center text-teal-400 ml-2"
-  >
-    {dark ? (
-      <SunMedium size={26} />
-    ) : (
-      <MoonStar size={26} />
-    )}
-  </button>
-
-  {/* Hamburger / Close */}
-  <button
-    onClick={() => setOpen(!open)}
-    className="w-10 h-10 flex items-center justify-center text-teal-400"
-  >
-    {open ? <X size={26} /> : <Menu size={26} />}
-  </button>
-
-</div>
-
-
+          {/* Hamburger / Close */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="w-10 h-10 flex items-center justify-center text-teal-400"
+          >
+            {open ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </header>
 
       {/* ================= OVERLAY ================= */}
@@ -168,24 +178,43 @@ export default function NavBar() {
         `}
       >
         <div className="flex flex-col mt-20 px-8 gap-6 text-white text-lg">
-
-          <a onClick={() => setOpen(false)} className="border-b border-white/10 pb-3">Home</a>
-          <a onClick={() => setOpen(false)} className="border-b border-white/10 pb-3">Blog</a>
-          <a onClick={() => setOpen(false)} className="border-b border-white/10 pb-3">Projects</a>
-          <a onClick={() => setOpen(false)} className="border-b border-white/10 pb-3">Contact</a>
+          <a
+            onClick={() => setOpen(false)}
+            className="border-b border-white/10 pb-3"
+          >
+            Home
+          </a>
+          <a
+            onClick={() => setOpen(false)}
+            className="border-b border-white/10 pb-3"
+          >
+            Blog
+          </a>
+          <a
+            onClick={() => setOpen(false)}
+            className="border-b border-white/10 pb-3"
+          >
+            Projects
+          </a>
+          <a
+            onClick={() => setOpen(false)}
+            className="border-b border-white/10 pb-3"
+          >
+            Contact
+          </a>
 
           <div className="mt-6">
             <ResumeButton />
           </div>
 
-            <div className="mt-10 border-t border-white/10 pt-6 flex justify-center gap-3">
-          {socials.map(({ icon: Icon, link, color }, index) => (
-            <a
-              key={index}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
+          <div className="mt-10 border-t border-white/10 pt-6 flex justify-center gap-3">
+            {socials.map(({ icon: Icon, link, color }, index) => (
+              <a
+                key={index}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
                 w-11 h-11
                 flex items-center justify-center
                 rounded-lg
@@ -195,13 +224,13 @@ export default function NavBar() {
                 hover:bg-white/10
                 hover:scale-110
               "
-            >
-              <Icon size={20} color={color} />
-            </a>
-          ))}
-        </div>
+              >
+                <Icon size={20} color={color} />
+              </a>
+            ))}
           </div>
         </div>
+      </div>
     </>
   );
 }

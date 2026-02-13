@@ -44,7 +44,7 @@ export default function Footer() {
         </p>
 
         {/* MOBILE SOCIALS */}
-</div>
+      </div>
     </footer>
   );
 }
