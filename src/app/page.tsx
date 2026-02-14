@@ -1,8 +1,8 @@
-import { BlogsComponent } from "./BlogsComponent";
-import { ProjectsComponent } from "./ProjectsComponent";
-import { AboutComponent } from "./AboutComponent";
-import { GithubContributeComponent } from "./GithubContributeComponent";
+import { ProjectsComponent } from "@/components/homeSections/ProjectsComponent";
+import { AboutComponent } from "@/components/homeSections/AboutComponent";
+import { GithubContributeComponent } from "@/components/homeSections/GithubContributeComponent";
 import { FaBlog, FaProjectDiagram, FaRProject } from "react-icons/fa";
+import { BlogsComponent } from "@/components/homeSections/BlogsComponent";
 const headingStyling = `mt-10 text-5xl   ml-0 md:ml-8 font-extrabold text-teal-200 [text-shadow:15px_15px_7px_black]`;
 
 export default function Home() {
