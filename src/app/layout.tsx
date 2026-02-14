@@ -1,8 +1,8 @@
 import Footer from "../components/layout/footer";
 import "../../global.css";
 import Navbar from "../components/layout/navBar";
-import SideSocials from "./SideSocials";
-import Providers from "./providers";
+import SideSocials from "../components/homeSections/SideSocials";
+import Providers from "../components/homeSections/providers";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
