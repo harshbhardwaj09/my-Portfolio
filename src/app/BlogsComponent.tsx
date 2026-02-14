@@ -1,14 +1,18 @@
+import { getBlogs } from "@/lib/getBlogs";
 import { ArrowRight, Heart } from "lucide-react";
 
-export const BlogsComponent = () => {
+export const BlogsComponent = async () => {
   const blogTitle =
     "How to freelance and make money as a Freelance Web Developer – A practical guide.";
 
   const likes = [124, 89, 256];
 
+  const data = await getBlogs();
+
+
   return (
     <div className="my-10 w-full   ml-0 md:ml-8 max-w-5xl flex flex-col gap-6">
-      {[blogTitle, blogTitle, blogTitle].map((title, index) => (
+    {data.blogs.map((blog: any, index: number) => (
         <div
           key={index}
           className="
@@ -29,13 +33,20 @@ export const BlogsComponent = () => {
           {/* CONTENT */}
           <div className="pl-4 flex flex-col gap-3 pr-16">
             <h3 className="text-xl md:text-2xl font-semibold text-white/90">
-              {title}
+              {blog?.title}
             </h3>
+          <div className="flex flex-wrap gap-2">
 
-            <p className="text-sm text-white/55">
-              Freelancing • Career • Web Development
-            </p>
+  {blog?.tags.map((tag: string, idx: number) => (
+    <span
+      key={idx}
+      className="text-xs px-2 py-1 bg-white/10 rounded-md text-white/70"
+    >
+      {tag}
+    </span>
+  ))}
 
+</div>
             {/* READ COMPLETE BLOG */}
             <div className="inline-flex items-center gap-2 cursor-pointer group/read">
               {/* TEXT (UNDERLINE ONLY HERE) */}
