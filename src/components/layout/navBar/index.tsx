@@ -1,39 +1,9 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
 import { SunMedium, MoonStar, Menu, X } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { ResumeButton } from "./ResumeButton";
-
-const socials = [
-  {
-    icon: MdEmail,
-    link: "mailto:harshbhardwaj3009@gmail.com",
-    color: "#14b8a6", // theme match subtle teal
-  },
-  {
-    icon: FaGithub,
-    link: "https://github.com/harshbhardwaj09",
-    color: "#ffffff",
-  },
-  {
-    icon: FaLinkedin,
-    link: "linkedin.com/in/harsh-bhardwaj-5826881a9",
-    color: "#0A66C2",
-  },
-  {
-    icon: FaXTwitter,
-    link: "https://x.com/compile_what",
-    color: "#ffffff",
-  },
-  {
-    icon: FaInstagram,
-    link: "https://www.instagram.com/unseen_harsh/",
-    color: "#E1306C",
-  },
-];
+import { socials } from "@/lib/constants";
 
 export default function NavBar() {
   const [dark, setDark] = useState(true);

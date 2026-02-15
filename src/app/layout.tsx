@@ -1,8 +1,8 @@
 import Footer from "../components/layout/footer";
 import "../../global.css";
 import Navbar from "../components/layout/navBar";
-import SideSocials from "../components/homeSections/SideSocials";
-import Providers from "../components/homeSections/providers";
+import SideSocials from "../components/sections/SideSocials";
+import ReactQueryProvider from "../providers/ReactQueryProvider";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -19,14 +19,14 @@ export default function RootLayout({
     <html lang="en" className="bg-fixed bg-black/95">
       <body className={poppins.className}>
         {/* Providers is client-side, but layout remains server-side */}
-        <Providers>
+        <ReactQueryProvider>
           <SideSocials />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
             <Navbar />
             <main>{children}</main>
             <Footer />
           </div>
-        </Providers>
+        </ReactQueryProvider>
       </body>
     </html>
   );

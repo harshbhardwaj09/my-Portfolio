@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Skills } from "./Skills";
 
-export const AboutComponent = () => {
+export const About = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {

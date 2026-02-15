@@ -1,41 +1,6 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-
-const socials = [
-  {
-    icon: MdEmail,
-    link: "mailto:harshbhardwaj3009@gmail.com",
-    label: "Email",
-    color: "#14b8a6", // theme match subtle teal
-  },
-  {
-    icon: FaGithub,
-    link: "https://github.com/harshbhardwaj09",
-    label: "GitHub",
-    color: "#ffffff",
-  },
-  {
-    icon: FaLinkedin,
-    link: "https://linkedin.com",
-    label: "LinkedIn",
-    color: "#0A66C2",
-  },
-  {
-    icon: FaXTwitter,
-    link: "https://x.com",
-    label: "X",
-    color: "#ffffff",
-  },
-  {
-    icon: FaInstagram,
-    link: "https://instagram.com",
-    label: "Instagram",
-    color: "#E1306C",
-  },
-];
+import { socials } from "@/lib/constants";
 
 export default function SideSocials() {
   return (
