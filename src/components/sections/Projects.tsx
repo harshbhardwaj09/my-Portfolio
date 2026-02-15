@@ -3,39 +3,9 @@
 import { Folder, ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
+import { projects } from "@/lib/constants";
 
-const projects = [
-  {
-    title: "Integrating Algolia Search",
-    desc: "Custom multisite compatible WordPress plugin for global search using Algolia.",
-    tech: ["Algolia", "WordPress", "PHP"],
-    live: "#",
-    github: "#",
-  },
-  {
-    title: "Time To Have More Fun",
-    desc: "Single-page app to help choose travel destinations.",
-    tech: ["Next.js", "Firebase", "Tailwind"],
-    live: "#",
-    github: "#",
-  },
-  {
-    title: "Headless CMS From Scratch",
-    desc: "Custom headless CMS built using Node, Express and Firebase.",
-    tech: ["Node", "Express", "Firebase"],
-    live: "#",
-    github: "#",
-  },
-  {
-    title: "Google Keep Clone",
-    desc: "A clean Google Keep clone with realtime sync.",
-    tech: ["Vue", "Firebase"],
-    live: "#",
-    github: "#",
-  },
-];
-
-export const ProjectsComponent = () => {
+export const Projects = () => {
   return (
     <section className="my-10 w-full   ml-0 md:ml-8 max-w-5xl">
       {/* GRID — 2 PER ROW */}

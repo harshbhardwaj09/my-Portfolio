@@ -1,6 +1,6 @@
 export const ResumeButton = () => (
   <a
-    href="/resume.pdf"
+    href="/harsh_bhardwaj_resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="

@@ -1,24 +1,19 @@
-import { ProjectsComponent } from "@/components/homeSections/ProjectsComponent";
-import { AboutComponent } from "@/components/homeSections/AboutComponent";
-import { GithubContributeComponent } from "@/components/homeSections/GithubContributeComponent";
-import { FaBlog, FaProjectDiagram, FaRProject } from "react-icons/fa";
-import { BlogsComponent } from "@/components/homeSections/BlogsComponent";
+import { Projects } from "@/components/sections/Projects";
+import { About } from "@/components/sections/About";
+import { GithubContribute } from "@/components/sections/GithubContribute";
+import { Blogs } from "@/components/sections/Blogs";
 const headingStyling = `mt-10 text-5xl   ml-0 md:ml-8 font-extrabold text-teal-200 [text-shadow:15px_15px_7px_black]`;
 
 export default function Home() {
   return (
-    <div
-      className="min-h-screen pl-4 
-    
-    "
-    >
-      <AboutComponent />
+    <div className="min-h-screen pl-4">
+      <About />
       <h2 className={headingStyling}>Recent Blogs</h2>
-      <BlogsComponent />
+      <Blogs />
       <h2 className={headingStyling}>Recent Projects</h2>
-      <ProjectsComponent />
+      <Projects />
       <h2 className={headingStyling}>GitHub Contribution</h2>
-      <GithubContributeComponent />
+      <GithubContribute />
     </div>
   );
 }

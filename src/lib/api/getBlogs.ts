@@ -35,7 +35,7 @@
  * 👉 Always prefer native fetch.
  */
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+import { API_URL } from "../config";
 
 export async function getBlogs() {
 
@@ -55,11 +55,11 @@ export async function getBlogs() {
        * - First request:
        *   Next.js fetches data from backend.
        *
-       * - Next 60 seconds:
+       * - Next 300 seconds:
        *   Next.js serves cached HTML.
        *   Backend is NOT called again.
        *
-       * - After 60 seconds:
+       * - After 300 seconds:
        *   Next.js re-fetches data in background.
        *
        * This improves:
@@ -77,18 +77,7 @@ export async function getBlogs() {
   if (!res.ok) {
     throw new Error("Failed to fetch blogs");
   }
-
   // Convert response to JSON
   const data = await res.json();
-
-  /**
-   * At this point:
-   * - Data is fetched on the server.
-   * - HTML will be generated with real blog content.
-   * - Google will see actual blog titles in page source.
-   *
-   * This makes the page fully SEO-friendly.
-   */
-
   return data;
 }

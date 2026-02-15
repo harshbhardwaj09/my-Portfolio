@@ -1,9 +1,7 @@
-import { getBlogs } from "@/lib/getBlogs";
+import { getBlogs } from "@/lib/api/getBlogs";
 import { ArrowRight, Heart } from "lucide-react";
 
-export const BlogsComponent = async () => {
-  const blogTitle =
-    "How to freelance and make money as a Freelance Web Developer – A practical guide.";
+export const Blogs = async () => {
 
   const likes = [124, 89, 256];
 
