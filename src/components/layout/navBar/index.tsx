@@ -114,7 +114,7 @@ export default function NavBar() {
           {/* Theme Toggle */}
           <button
             onClick={handleToggle}
-            className="w-10 h-10 flex items-center justify-center text-teal-400 ml-2"
+            className="w-10 h-10 flex items-center justify-center text-teal-400"
           >
             {dark ? <SunMedium size={26} /> : <MoonStar size={26} />}
           </button>

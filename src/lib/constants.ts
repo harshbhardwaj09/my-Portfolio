@@ -17,7 +17,7 @@ export const socials = [
   },
   {
     icon: FaLinkedin,
-    link: "linkedin.com/in/harsh-bhardwaj-5826881a9",
+    link: "https://linkedin.com/in/harsh-bhardwaj-5826881a9",
     label: "LinkedIn",
     color: "#0A66C2",
   },
