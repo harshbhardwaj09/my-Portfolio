@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { socials } from "@/lib/constants";
+import { socials } from '@/lib/constants';
 
 export default function SideSocials() {
   return (
@@ -11,7 +11,7 @@ export default function SideSocials() {
           <a
             key={index}
             href={link}
-            target={label === "Email" ? "_self" : "_blank"}
+            target={label === 'Email' ? '_self' : '_blank'}
             rel="noopener noreferrer"
             className="
               group relative
@@ -39,7 +39,7 @@ export default function SideSocials() {
             />
 
             {/* Subtle glow only for X */}
-            {label === "X" && (
+            {label === 'X' && (
               <span
                 className="
                 absolute inset-0

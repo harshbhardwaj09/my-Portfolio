@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   SiReact,
@@ -7,16 +7,16 @@ import {
   SiTailwindcss,
   SiExpress,
   SiMongodb,
-} from "react-icons/si";
-import { useEffect, useRef, useState } from "react";
+} from 'react-icons/si';
+import { useEffect, useRef, useState } from 'react';
 
 const techs = [
-  { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF8" },
-  { name: "Express", icon: SiExpress, color: "#ffffff" },
-  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: 'React', icon: SiReact, color: '#61DAFB' },
+  { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
+  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+  { name: 'Tailwind', icon: SiTailwindcss, color: '#38BDF8' },
+  { name: 'Express', icon: SiExpress, color: '#ffffff' },
+  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
 ];
 
 export const Skills = () => {

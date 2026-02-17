@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -15,14 +15,14 @@ export default function Footer() {
         {/* TEXT */}
         {/* MAIN TEXT */}
         <p className="text-white/60 text-md tracking-wide">
-          Designed & Built by{" "}
-          <span className="font-semibold text-white">Harsh Bhardwaj</span> ©{" "}
+          Designed & Built by{' '}
+          <span className="font-semibold text-white">Harsh Bhardwaj</span> ©{' '}
           {year}
         </p>
 
         {/* WORK LINE */}
         <p className="mt-4 text-white/70 text-md">
-          Interested in working together?{" "}
+          Interested in working together?{' '}
           <a
             href="mailto:harshbhardwaj3009@gmail.com"
             className="

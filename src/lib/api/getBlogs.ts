@@ -35,47 +35,42 @@
  * 👉 Always prefer native fetch.
  */
 
-import { API_URL } from "../config";
+import { API_URL } from '../config';
 
 export async function getBlogs() {
-
   // This log appears in the SERVER terminal,
   // not in the browser.
 
   // We call our Express backend API.
   // page=1 and limit=5 ensures only 5 blogs are returned.
-  const res = await fetch(
-    `${API_URL}/api/blogs?page=1&limit=5`,
-    {
-      /**
-       * ISR (Incremental Static Regeneration)
-       *
-       * What this does:
-       *
-       * - First request:
-       *   Next.js fetches data from backend.
-       *
-       * - Next 300 seconds:
-       *   Next.js serves cached HTML.
-       *   Backend is NOT called again.
-       *
-       * - After 300 seconds:
-       *   Next.js re-fetches data in background.
-       *
-       * This improves:
-       * ✔ Performance
-       * ✔ Backend load reduction
-       * ✔ SEO
-       */
-      next: { revalidate: 300 }, // Revalidate every 5 minutes
-    }
-  );
-
+  const res = await fetch(`${API_URL}/api/blogs?page=1&limit=5`, {
+    /**
+     * ISR (Incremental Static Regeneration)
+     *
+     * What this does:
+     *
+     * - First request:
+     *   Next.js fetches data from backend.
+     *
+     * - Next 300 seconds:
+     *   Next.js serves cached HTML.
+     *   Backend is NOT called again.
+     *
+     * - After 300 seconds:
+     *   Next.js re-fetches data in background.
+     *
+     * This improves:
+     * ✔ Performance
+     * ✔ Backend load reduction
+     * ✔ SEO
+     */
+    next: { revalidate: 300 }, // Revalidate every 5 minutes
+  });
 
   // If backend fails, we throw error.
   // Next.js will show error page if needed.
   if (!res.ok) {
-    throw new Error("Failed to fetch blogs");
+    throw new Error('Failed to fetch blogs');
   }
   // Convert response to JSON
   const data = await res.json();

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { Skills } from "./Skills";
+import { useEffect, useState } from 'react';
+import { Skills } from './Skills';
 
 export const About = () => {
   const [show, setShow] = useState(false);
@@ -36,7 +36,7 @@ export const About = () => {
             text-transparent
             bg-clip-text
             transition-all duration-1000 ease-out
-            ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+            ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
           `}
           >
             Harsh Bhardwaj
@@ -45,7 +45,7 @@ export const About = () => {
           {/* ROLE */}
           <p
             className={`mt-6 text-xl md:text-2xl text-teal-200 transition-all duration-1000 delay-200 ${
-              show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
             Full Stack Developer
@@ -54,7 +54,7 @@ export const About = () => {
           {/* DESCRIPTION */}
           <p
             className={`mt-8 mx-auto max-w-2xl text-lg text-teal-100 leading-relaxed transition-all duration-1000 delay-400 ${
-              show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
             I design and build scalable, high-performance web applications with
