@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
 const GitHubCalendar = dynamic(
-  () => import("react-github-calendar").then((mod) => mod.GitHubCalendar),
+  () => import('react-github-calendar').then((mod) => mod.GitHubCalendar),
   { ssr: false },
 );
 export const GithubContribute = () => {

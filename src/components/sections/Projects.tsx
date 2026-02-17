@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Folder, ExternalLink } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
-import { ArrowRight } from "lucide-react";
-import { projects } from "@/lib/constants";
+import { Folder, ExternalLink } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
+import { ArrowRight } from 'lucide-react';
+import { projects } from '@/lib/constants';
 
 export const Projects = () => {
   return (

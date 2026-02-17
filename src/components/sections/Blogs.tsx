@@ -1,16 +1,14 @@
-import { getBlogs } from "@/lib/api/getBlogs";
-import { ArrowRight, Heart } from "lucide-react";
+import { getBlogs } from '@/lib/api/getBlogs';
+import { ArrowRight, Heart } from 'lucide-react';
 
 export const Blogs = async () => {
-
   const likes = [124, 89, 256];
 
   const data = await getBlogs();
 
-
   return (
     <div className="my-10 w-full   ml-0 md:ml-8 max-w-5xl flex flex-col gap-6">
-    {data.blogs.map((blog: any, index: number) => (
+      {data.blogs.map((blog: any, index: number) => (
         <div
           key={index}
           className="
@@ -33,18 +31,16 @@ export const Blogs = async () => {
             <h3 className="text-xl md:text-2xl font-semibold text-white/90">
               {blog?.title}
             </h3>
-          <div className="flex flex-wrap gap-2">
-
-  {blog?.tags.map((tag: string, idx: number) => (
-    <span
-      key={idx}
-      className="text-xs px-2 py-1 bg-white/10 rounded-md text-white/70"
-    >
-      {tag}
-    </span>
-  ))}
-
-</div>
+            <div className="flex flex-wrap gap-2">
+              {blog?.tags.map((tag: string, idx: number) => (
+                <span
+                  key={idx}
+                  className="text-xs px-2 py-1 bg-white/10 rounded-md text-white/70"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
             {/* READ COMPLETE BLOG */}
             <div className="inline-flex items-center gap-2 cursor-pointer group/read">
               {/* TEXT (UNDERLINE ONLY HERE) */}

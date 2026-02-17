@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { SunMedium, MoonStar, Menu, X } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
-import { ResumeButton } from "./ResumeButton";
-import { socials } from "@/lib/constants";
+import { SunMedium, MoonStar, Menu, X } from 'lucide-react';
+import { useEffect, useState, useRef } from 'react';
+import { ResumeButton } from './ResumeButton';
+import { socials } from '@/lib/constants';
 
 export default function NavBar() {
   const [dark, setDark] = useState(true);
@@ -12,12 +12,12 @@ export default function NavBar() {
 
   // Dark mode toggle
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
+    document.documentElement.classList.toggle('dark', dark);
   }, [dark]);
 
   // Sound init
   useEffect(() => {
-    clickSound.current = new Audio("/tick.mp3");
+    clickSound.current = new Audio('/tick.mp3');
     clickSound.current.volume = 1;
   }, []);
 
@@ -144,7 +144,7 @@ export default function NavBar() {
           bg-black/90
           z-50
           transition-transform duration-300 ease-in-out
-          ${open ? "translate-x-0" : "-translate-x-full"}
+          ${open ? 'translate-x-0' : '-translate-x-full'}
         `}
       >
         <div className="flex flex-col mt-20 px-8 gap-6 text-white text-lg">
