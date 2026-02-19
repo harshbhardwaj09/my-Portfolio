@@ -65,3 +65,10 @@ export const projects = [
     github: '#',
   },
 ];
+
+export const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'Blogs', href: '/blogs' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Contact', href: '/contact' },
+];
