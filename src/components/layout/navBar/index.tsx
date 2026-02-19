@@ -1,9 +1,11 @@
 'use client';
 
-import { SunMedium, MoonStar, Menu, X } from 'lucide-react';
+import { SunMedium, MoonStar } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 import { ResumeButton } from './ResumeButton';
-import { socials } from '@/lib/constants';
+
+import { Drawer } from './mobile/Drawer';
+import { HamburgerMenu } from './mobile/HamburgerMenu';
 
 export default function NavBar() {
   const [dark, setDark] = useState(true);
@@ -110,23 +112,12 @@ export default function NavBar() {
         </div>
 
         {/* ================= MOBILE ================= */}
-        <div className="flex md:hidden items-center justify-between w-full px-4">
-          {/* Theme Toggle */}
-          <button
-            onClick={handleToggle}
-            className="w-10 h-10 flex items-center justify-center text-teal-400"
-          >
-            {dark ? <SunMedium size={26} /> : <MoonStar size={26} />}
-          </button>
-
-          {/* Hamburger / Close */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="w-10 h-10 flex items-center justify-center text-teal-400"
-          >
-            {open ? <X size={26} /> : <Menu size={26} />}
-          </button>
-        </div>
+        <HamburgerMenu
+          open={open}
+          setOpen={setOpen}
+          handleToggle={handleToggle}
+          dark={dark}
+        />
       </header>
 
       {/* ================= OVERLAY ================= */}
@@ -138,69 +129,7 @@ export default function NavBar() {
       )}
 
       {/* ================= DRAWER ================= */}
-      <div
-        className={`
-          fixed top-0 left-0 h-full w-80
-          bg-black/90
-          z-50
-          transition-transform duration-300 ease-in-out
-          ${open ? 'translate-x-0' : '-translate-x-full'}
-        `}
-      >
-        <div className="flex flex-col mt-20 px-8 gap-6 text-white text-lg">
-          <a
-            onClick={() => setOpen(false)}
-            className="border-b border-white/10 pb-3"
-          >
-            Home
-          </a>
-          <a
-            onClick={() => setOpen(false)}
-            className="border-b border-white/10 pb-3"
-          >
-            Blog
-          </a>
-          <a
-            onClick={() => setOpen(false)}
-            className="border-b border-white/10 pb-3"
-          >
-            Projects
-          </a>
-          <a
-            onClick={() => setOpen(false)}
-            className="border-b border-white/10 pb-3"
-          >
-            Contact
-          </a>
-
-          <div className="mt-6">
-            <ResumeButton />
-          </div>
-
-          <div className="mt-10 border-t border-white/10 pt-6 flex justify-center gap-3">
-            {socials.map(({ icon: Icon, link, color }, index) => (
-              <a
-                key={index}
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                w-11 h-11
-                flex items-center justify-center
-                rounded-lg
-                bg-white/5
-                border border-white/10
-                transition-all duration-300
-                hover:bg-white/10
-                hover:scale-110
-              "
-              >
-                <Icon size={20} color={color} />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
+      <Drawer open={open} setOpen={setOpen} />
     </>
   );
 }
