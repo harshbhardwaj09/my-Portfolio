@@ -1,6 +1,16 @@
 import { Menu, MoonStar, SunMedium, X } from 'lucide-react';
 
-export const HamburgerMenu = ({ open, setOpen, handleToggle, dark }: any) => {
+export const HamburgerMenu = ({
+  open,
+  setOpen,
+  handleToggle,
+  dark,
+}: {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  handleToggle: () => void;
+  dark: boolean;
+}) => {
   return (
     <div className="flex md:hidden items-center justify-between w-full px-4">
       {/* Theme Toggle */}
