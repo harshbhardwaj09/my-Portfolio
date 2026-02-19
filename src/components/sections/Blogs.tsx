@@ -8,10 +8,11 @@ export const Blogs = async () => {
 
   return (
     <div className="my-10 w-full   ml-0 md:ml-8 max-w-5xl flex flex-col gap-6">
-      {data.blogs.map((blog: any, index: number) => (
-        <div
-          key={index}
-          className="
+      {data.blogs.map(
+        (blog: { title?: string; tags?: string[] }, index: number) => (
+          <div
+            key={index}
+            className="
             group relative
             p-6 rounded-xl
             bg-white/5
@@ -22,30 +23,30 @@ export const Blogs = async () => {
                 hover:shadow-[35px_35px_20px_rgba(0,0,0,0.9)]
             hover:bg-white/15
           "
-        >
-          {/* LEFT RAIL */}
-          <span className="absolute left-0 top-4 bottom-4 w-[3px] bg-white/20 rounded-full" />
+          >
+            {/* LEFT RAIL */}
+            <span className="absolute left-0 top-4 bottom-4 w-[3px] bg-white/20 rounded-full" />
 
-          {/* CONTENT */}
-          <div className="pl-4 flex flex-col gap-3 pr-16">
-            <h3 className="text-xl md:text-2xl font-semibold text-white/90">
-              {blog?.title}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {blog?.tags.map((tag: string, idx: number) => (
+            {/* CONTENT */}
+            <div className="pl-4 flex flex-col gap-3 pr-16">
+              <h3 className="text-xl md:text-2xl font-semibold text-white/90">
+                {blog?.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {blog?.tags?.map((tag: string, idx: number) => (
+                  <span
+                    key={idx}
+                    className="text-xs px-2 py-1 bg-white/10 rounded-md text-white/70"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              {/* READ COMPLETE BLOG */}
+              <div className="inline-flex items-center gap-2 cursor-pointer group/read">
+                {/* TEXT (UNDERLINE ONLY HERE) */}
                 <span
-                  key={idx}
-                  className="text-xs px-2 py-1 bg-white/10 rounded-md text-white/70"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-            {/* READ COMPLETE BLOG */}
-            <div className="inline-flex items-center gap-2 cursor-pointer group/read">
-              {/* TEXT (UNDERLINE ONLY HERE) */}
-              <span
-                className="
+                  className="
                   relative
                   text-sm font-medium text-white/60
                   transition-colors duration-300
@@ -64,30 +65,31 @@ export const Blogs = async () => {
                   after:duration-300
                   group-hover/read:after:scale-x-100
                 "
-              >
-                Read complete blog
-              </span>
+                >
+                  Read complete blog
+                </span>
 
-              {/* ARROW (NO UNDERLINE EVER) */}
-              <ArrowRight
-                size={16}
-                className="
+                {/* ARROW (NO UNDERLINE EVER) */}
+                <ArrowRight
+                  size={16}
+                  className="
                   text-white/60
                   transition-all duration-300
                   group-hover/read:text-white
                   group-hover/read:translate-x-1
                 "
-              />
+                />
+              </div>
+            </div>
+
+            {/* HEART / LIKES */}
+            <div className="absolute bottom-4 right-4 flex items-center gap-1 text-white/50">
+              <Heart size={16} />
+              <span className="text-sm">{likes[index]}</span>
             </div>
           </div>
-
-          {/* HEART / LIKES */}
-          <div className="absolute bottom-4 right-4 flex items-center gap-1 text-white/50">
-            <Heart size={16} />
-            <span className="text-sm">{likes[index]}</span>
-          </div>
-        </div>
-      ))}
+        ),
+      )}
 
       {/* VIEW MORE BLOGS */}
       <div className="flex justify-center mt-8 items-center gap-2 cursor-pointer group/view">

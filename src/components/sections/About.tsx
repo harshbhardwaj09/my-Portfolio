@@ -4,10 +4,13 @@ import { useEffect, useState } from 'react';
 import { Skills } from './Skills';
 
 export const About = () => {
+  const showText = () => {
+    setShow(true);
+  };
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    setShow(true);
+    showText();
   }, []);
 
   return (
@@ -16,7 +19,7 @@ export const About = () => {
         {/* WIDTH SAME AS BLOG SECTION */}
         <div className="w-full max-w-5xl px-4 text-center relative overflow-hidden">
           {/* HUGE FAINT BACKGROUND TEXT */}
-          <h1 className="absolute inset-0 flex items-start justify-center text-[140px] md:text-[220px] font-black text-white/5 select-none pointer-events-none tracking-tight">
+          <h1 className="absolute inset-0 flex items-start justify-center text-[120px] md:text-[220px] font-black text-white/5 select-none pointer-events-none tracking-tight">
             HARSH
           </h1>
 

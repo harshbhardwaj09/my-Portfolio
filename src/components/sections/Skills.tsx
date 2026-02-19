@@ -8,7 +8,6 @@ import {
   SiExpress,
   SiMongodb,
 } from 'react-icons/si';
-import { useEffect, useRef, useState } from 'react';
 
 const techs = [
   { name: 'React', icon: SiReact, color: '#61DAFB' },
