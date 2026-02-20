@@ -19,7 +19,7 @@ export const Drawer = ({
   return (
     <div
       className={`
-                  fixed top-0 inset-0 min-h-screen h-screen left-0 h-[100dvh] w-[75%]
+                  fixed top-0 bottom-0 inset-0 min-h-screen h-screen left-0 h-[100dvh] w-[75%]
                   overflow-y-auto
                   bg-black/90 backdrop-blur-sm
                   z-50
