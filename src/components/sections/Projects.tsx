@@ -1,9 +1,8 @@
-'use client';
-
 import { Folder, ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { ArrowRight } from 'lucide-react';
 import { projects } from '@/lib/constants';
+import Link from 'next/link';
 
 export const Projects = () => {
   return (
@@ -79,43 +78,48 @@ export const Projects = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-16 items-center gap-2 cursor-pointer group/view">
-        <span
-          className="
-              relative
-              text-base font-medium text-white/70
-              transition-colors duration-300
-              group-hover/view:text-white
-
-              after:content-['']
-              after:absolute
-              after:left-0
-              after:-bottom-1
-              after:h-[1px]
-              after:w-full
-              after:bg-white
-              after:scale-x-0
-              after:origin-left
-              after:transition-transform
-              after:duration-300
-              group-hover/view:after:scale-x-100
-            "
-        >
-          View more projects
-        </span>
-
-        <ArrowRight
-          size={18}
-          className="
-              text-white/70
-              transition-all duration-300
-              group-hover/view:text-white
-              group-hover/view:translate-x-1
-            "
-        />
-      </div>
 
       {/* VIEW ALL PROJECTS */}
+      <div className="flex justify-center mt-8">
+        <Link
+          href="/blogs"
+          className="flex items-center gap-2 cursor-pointer group/view"
+        >
+          <span
+            className="
+        relative
+        text-base font-medium text-white/70
+        transition-colors duration-300
+        group-hover/view:text-white
+
+        after:content-['']
+        after:absolute
+        after:left-0
+        after:-bottom-1
+        after:h-[1px]
+        after:w-full
+        after:bg-white
+        after:scale-x-0
+        after:origin-left
+        after:transition-transform
+        after:duration-300
+        group-hover/view:after:scale-x-100
+      "
+          >
+            View more projects
+          </span>
+
+          <ArrowRight
+            size={18}
+            className="
+        text-white/70
+        transition-all duration-300
+        group-hover/view:text-white
+        group-hover/view:translate-x-1
+      "
+          />
+        </Link>
+      </div>
     </section>
   );
 };

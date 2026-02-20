@@ -2,7 +2,7 @@ import { socials } from '@/lib/constants';
 
 export const Socials = () => {
   return (
-    <div className="flex border-t border-white/20 pt-5 justify-center gap-3">
+    <div className="flex border-t border-white/20 py-5 mb-3 justify-center gap-3">
       {socials.map(({ icon: Icon, link, color }, index) => (
         <a
           key={index}

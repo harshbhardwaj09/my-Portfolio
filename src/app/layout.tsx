@@ -10,6 +10,18 @@ const poppins = Poppins({
   weight: ['400', '600', '700', '900'],
 });
 
+export const metadata = {
+  title: {
+    default: 'Harsh Bhardwaj | Full Stack Developer',
+    template: '%s | Harsh Bhardwaj',
+  },
+  icons: {
+    icon: '/profile.png',
+    apple: '/profile.png',
+  },
+  description: 'Showcasing my projects, blogs, and GitHub contributions.',
+};
+
 export default function RootLayout({
   children,
 }: {
