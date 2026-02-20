@@ -1,16 +1,20 @@
 import { getBlogs } from '@/lib/api/getBlogs';
 import { ArrowRight, Heart } from 'lucide-react';
+import Link from 'next/link';
 
 export const Blogs = async () => {
   const likes = [124, 89, 256];
-
   const data = await getBlogs();
 
   return (
     <div className="my-10 w-full   ml-0 md:ml-8 max-w-5xl flex flex-col gap-6">
       {data.blogs.map(
-        (blog: { title?: string; tags?: string[] }, index: number) => (
-          <div
+        (
+          blog: { title?: string; tags?: string[]; _id: string },
+          index: number,
+        ) => (
+          <Link
+            href={`/blogs/${blog._id}`}
             key={index}
             className="
             group relative
@@ -87,45 +91,50 @@ export const Blogs = async () => {
               <Heart size={16} />
               <span className="text-sm">{likes[index]}</span>
             </div>
-          </div>
+          </Link>
         ),
       )}
 
       {/* VIEW MORE BLOGS */}
-      <div className="flex justify-center mt-8 items-center gap-2 cursor-pointer group/view">
-        <span
-          className="
-              relative
-              text-base font-medium text-white/70
-              transition-colors duration-300
-              group-hover/view:text-white
-
-              after:content-['']
-              after:absolute
-              after:left-0
-              after:-bottom-1
-              after:h-[1px]
-              after:w-full
-              after:bg-white
-              after:scale-x-0
-              after:origin-left
-              after:transition-transform
-              after:duration-300
-              group-hover/view:after:scale-x-100
-            "
+      <div className="flex justify-center mt-8">
+        <Link
+          href="/blogs"
+          className="flex items-center gap-2 cursor-pointer group/view"
         >
-          View more blogs
-        </span>
+          <span
+            className="
+        relative
+        text-base font-medium text-white/70
+        transition-colors duration-300
+        group-hover/view:text-white
 
-        <ArrowRight
-          size={18}
-          className="
-              text-white/70
-              transition-all duration-300
-              group-hover/view:text-white
-              group-hover/view:translate-x-1
-            "
-        />
+        after:content-['']
+        after:absolute
+        after:left-0
+        after:-bottom-1
+        after:h-[1px]
+        after:w-full
+        after:bg-white
+        after:scale-x-0
+        after:origin-left
+        after:transition-transform
+        after:duration-300
+        group-hover/view:after:scale-x-100
+      "
+          >
+            View more blogs
+          </span>
+
+          <ArrowRight
+            size={18}
+            className="
+        text-white/70
+        transition-all duration-300
+        group-hover/view:text-white
+        group-hover/view:translate-x-1
+      "
+          />
+        </Link>
       </div>
     </div>
   );

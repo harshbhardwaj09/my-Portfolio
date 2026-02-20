@@ -19,14 +19,16 @@ export const Drawer = ({
   return (
     <div
       className={`
-                  fixed top-0 left-0 h-full w-80
+                  fixed top-0 left-0 h-[100dvh] w-[75%]
+                  overflow-y-auto
+                  overscroll-contain
                   bg-black/90 backdrop-blur-sm
                   z-50
                   transition-transform duration-300 ease-in-out
                   ${open ? 'translate-x-0' : '-translate-x-full'}
                 `}
     >
-      <div className="flex flex-col mt-20 px-8 gap-6 text-white text-lg">
+      <div className="flex flex-col mt-12 px-8 gap-6 text-white text-lg">
         {navLinks.map(({ name, href }, index) => (
           <Link
             key={index}
