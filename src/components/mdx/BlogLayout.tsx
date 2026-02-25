@@ -50,9 +50,9 @@ export default function BlogLayout({ children }: Props) {
         </article>
 
         {/* Sticky TOC */}
-        <div className="hidden lg:block w-64">
+        {/* <div className="hidden lg:block w-64">
           <TableOfContents headings={headings} />
-        </div>
+        </div> */}
       </div>
     </>
   );
