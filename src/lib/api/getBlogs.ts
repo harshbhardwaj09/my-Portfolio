@@ -43,7 +43,7 @@ export async function getBlogs() {
 
   // We call our Express backend API.
   // page=1 and limit=5 ensures only 5 blogs are returned.
-  const res = await fetch(`${API_URL}/api/blogs?page=1&limit=5`, {
+  const res = await fetch(`${API_URL}/api/blogs?page=1&limit=105`, {
     /**
      * ISR (Incremental Static Regeneration)
      *

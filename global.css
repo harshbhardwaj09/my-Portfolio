@@ -1,3 +1,4 @@
+@import 'highlight.js/styles/atom-one-dark.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,4 +26,91 @@
 }
 .animate-scroll {
   animation: scroll 18s linear infinite;
+}
+.blog-content {
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.blog-content h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-top: 2.5rem;
+}
+
+.blog-content h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+.blog-content p {
+  line-height: 1.9;
+  margin: 1.2rem 0;
+}
+
+.blog-content a {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.blog-content img {
+  border-radius: 18px;
+  margin: 2.5rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content pre {
+  background: #111827;
+  color: white;
+  padding: 1rem;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid #2563eb;
+  padding-left: 1rem;
+  color: #6b7280;
+  margin: 2rem 0;
+}
+
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.blog-content th {
+  background: #111827;
+  color: white;
+  padding: 0.9rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.blog-content td {
+  padding: 0.9rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.blog-content tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.blog-content pre {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 16px;
+  overflow-x: auto;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.blog-content code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
 }

@@ -10,14 +10,22 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@mdx-js/mdx": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
     "@tailwindcss/typography": "^0.5.19",
     "@tanstack/react-query": "^5.90.21",
+    "highlight.js": "^11.11.1",
+    "isomorphic-dompurify": "^3.0.0",
     "lucide-react": "^0.563.0",
+    "marked": "^17.0.3",
     "next": "16.1.4",
+    "next-mdx-remote": "^6.0.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-github-calendar": "^5.0.5",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "rehype-highlight": "^7.0.2",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
