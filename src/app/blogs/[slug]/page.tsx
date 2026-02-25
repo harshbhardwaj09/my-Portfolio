@@ -1,21 +1,49 @@
-import CompleteBlog from '@/components/pages/completeBlog';
+import { notFound } from 'next/navigation';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import { blogComponents } from '@/components/mdx/blogComponents';
+import { Metadata } from 'next';
+import { getBlogByID } from '@/lib/api/getBlogByID';
+import BlogLayout from '@/components/mdx/BlogLayout';
+import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
 
-const headingStyling = `mt-10 text-5xl ml-0 md:ml-8 font-extrabold text-teal-200 [text-shadow:15px_15px_7px_black]`;
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
 
-export const metadata = {
-  title: 'blogs',
-};
+// export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+//   const post = await getBlogByID(params.slug);
+//   if (!post) return {};
+//   return {
+//     title: post.title,
+//     description: post.description,
+//   };
+// }
 
-export default async function BlogsPage({
+export default async function BlogPag({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const id = (await params).slug;
   console.log('blog id: ', id);
+  const post = await getBlogByID(id);
+  if (!post) return notFound();
+
   return (
-    <div className="min-h-screen ml-0">
-      <CompleteBlog id={id} />
-    </div>
+    <BlogLayout>
+      <MDXRemote
+        source={post.content}
+        components={blogComponents}
+        options={{
+          mdxOptions: {
+            remarkPlugins: [remarkGfm],
+            rehypePlugins: [rehypeHighlight],
+          },
+        }}
+      />
+    </BlogLayout>
   );
 }
