@@ -1,7 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export default function TableOfContents({ headings }: { headings: { id: string; text: string }[] }) {
+export default function TableOfContents({
+  headings,
+}: {
+  headings: { id: string; text: string }[];
+}) {
   const [active, setActive] = useState('');
 
   useEffect(() => {
@@ -20,9 +24,7 @@ export default function TableOfContents({ headings }: { headings: { id: string; 
 
   return (
     <div className="sticky top-24 text-sm space-y-2">
-      <p className="font-semibold text-white mb-3">
-        On this page
-      </p>
+      <p className="font-semibold text-white mb-3">On this page</p>
 
       {headings.map((h) => (
         <a
@@ -30,8 +32,8 @@ export default function TableOfContents({ headings }: { headings: { id: string; 
           href={`#${h.id}`}
           className={`block transition ${
             active === h.id
-              ? "text-teal-400 font-medium"
-              : "text-gray-400 hover:text-white"
+              ? 'text-teal-400 font-medium'
+              : 'text-gray-400 hover:text-white'
           }`}
         >
           {h.text}

@@ -112,9 +112,9 @@ export const blogComponents: MDXComponents = {
     );
   },
 
-  img: (props) => (
+  img: (props: React.ComponentProps<'img'>) => (
     <Image
-      src={'/profile.png'}
+      src={props.src as string}
       alt={props.alt || ''}
       width={900}
       height={500}
