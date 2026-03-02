@@ -10,7 +10,7 @@ export default function BlogsPage() {
   return (
     <div className="min-h-screen ml-0">
       <h2 className={headingStyling}>Recent Blogs</h2>
-      <Blogs />
+      <Blogs limit={20} />
     </div>
   );
 }
