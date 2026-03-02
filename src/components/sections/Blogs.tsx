@@ -2,9 +2,9 @@ import { getBlogs } from '@/lib/api/getBlogs';
 import { ArrowRight, Heart } from 'lucide-react';
 import Link from 'next/link';
 
-export const Blogs = async () => {
+export const Blogs = async ({ limit = 5 }) => {
   const likes = [124, 89, 256];
-  const data = await getBlogs();
+  const data = await getBlogs(limit);
 
   return (
     <div className="my-10 w-full   ml-0 md:ml-8 max-w-5xl flex flex-col gap-6">
@@ -107,7 +107,6 @@ export const Blogs = async () => {
         text-base font-medium text-white/70
         transition-colors duration-300
         group-hover/view:text-white
-
         after:content-['']
         after:absolute
         after:left-0

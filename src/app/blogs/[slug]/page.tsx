@@ -1,27 +1,25 @@
-import { notFound } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { blogComponents } from "@/components/mdx/blogComponents";
-import { getBlogByID } from "@/lib/api/getBlogByID";
-import BlogLayout from "@/components/mdx/BlogLayout";
-import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
-import Image from "next/image";
+import { notFound } from 'next/navigation';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import { blogComponents } from '@/components/mdx/blogComponents';
+import { getBlogByID } from '@/lib/api/getBlogByID';
+import BlogLayout from '@/components/mdx/BlogLayout';
+import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
+import Image from 'next/image';
 
 export default async function BlogPag({
   params,
 }: {
   params: { slug: string };
 }) {
-  console.log ("params>>",params)
-  const id =  (await params).slug;
-  console.log("Fetching blog post with ID:", id);
+  console.log('params>>', params);
+  const id = (await params).slug;
+  console.log('Fetching blog post with ID:', id);
   const post = await getBlogByID(id);
-
 
   return (
     <BlogLayout>
       <div className="w-full overflow-x-hidden">
-
         <MDXRemote
           source={post.content}
           components={{
@@ -37,7 +35,7 @@ export default async function BlogPag({
                   <div className="mx-auto w-full max-w-3xl overflow-hidden rounded-2xl bg-zinc-900">
                     <Image
                       src={post.coverImage}
-                      alt={post.title || "Cover"}
+                      alt={post.title || 'Cover'}
                       width={1600}
                       height={900}
                       priority
