@@ -9,8 +9,8 @@ export const metadata = {
 export default function BlogsPage() {
   return (
     <div className="min-h-screen ml-0">
-      <h2 className={headingStyling}>Recent Blogs</h2>
-      <Blogs limit={20} />
+      <h2 className={headingStyling}>My Blogs</h2>
+      <Blogs limit={20} showViewMore={false} />
     </div>
   );
 }

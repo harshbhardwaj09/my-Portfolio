@@ -2,7 +2,13 @@ import { getBlogs } from '@/lib/api/getBlogs';
 import { ArrowRight, Heart } from 'lucide-react';
 import Link from 'next/link';
 
-export const Blogs = async ({ limit = 5 }) => {
+export const Blogs = async ({
+  showViewMore = true,
+  limit = 4,
+}: {
+  showViewMore?: boolean;
+  limit?: number;
+}) => {
   const likes = [124, 89, 256];
   const data = await getBlogs(limit);
 
@@ -55,7 +61,6 @@ export const Blogs = async ({ limit = 5 }) => {
                   text-sm font-medium text-white/60
                   transition-colors duration-300
                   group-hover/read:text-white
-
                   after:content-['']
                   after:absolute
                   after:left-0
@@ -96,13 +101,14 @@ export const Blogs = async ({ limit = 5 }) => {
       )}
 
       {/* VIEW MORE BLOGS */}
-      <div className="flex justify-center mt-8">
-        <Link
-          href="/blogs"
-          className="flex items-center gap-2 cursor-pointer group/view"
-        >
-          <span
-            className="
+      {showViewMore && (
+        <div className="flex justify-center mt-8">
+          <Link
+            href="/blogs"
+            className="flex items-center gap-2 cursor-pointer group/view"
+          >
+            <span
+              className="
         relative
         text-base font-medium text-white/70
         transition-colors duration-300
@@ -120,21 +126,21 @@ export const Blogs = async ({ limit = 5 }) => {
         after:duration-300
         group-hover/view:after:scale-x-100
       "
-          >
-            View more blogs
-          </span>
-
-          <ArrowRight
-            size={18}
-            className="
+            >
+              View more blogs
+            </span>
+            <ArrowRight
+              size={18}
+              className="
         text-white/70
         transition-all duration-300
         group-hover/view:text-white
         group-hover/view:translate-x-1
       "
-          />
-        </Link>
-      </div>
+            />
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

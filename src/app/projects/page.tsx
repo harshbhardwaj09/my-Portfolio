@@ -7,8 +7,8 @@ export const metadata = {
 export default function ProjectPage() {
   return (
     <div className="min-h-screen ml-0">
-      <h2 className={headingStyling}>Recent Projects</h2>
-      <Projects />
+      <h2 className={headingStyling}>My Projects</h2>
+      <Projects showViewMore={false} />
     </div>
   );
 }
