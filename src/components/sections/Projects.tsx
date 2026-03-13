@@ -4,7 +4,11 @@ import { ArrowRight } from 'lucide-react';
 import { projects } from '@/lib/constants';
 import Link from 'next/link';
 
-export const Projects = () => {
+export const Projects = ({
+  showViewMore = true,
+}: {
+  showViewMore?: boolean;
+}) => {
   return (
     <section className="my-10 w-full   ml-0 md:ml-8 max-w-5xl">
       {/* GRID — 2 PER ROW */}
@@ -19,13 +23,11 @@ export const Projects = () => {
               border border-white/10
               p-6
               min-h-[230px]
-
               shadow-[25px_25px_20px_rgba(0,0,0,0.75)]
               transition-all duration-500 ease-out
               hover:-translate-y-[6px]
               hover:shadow-[35px_35px_20px_rgba(0,0,0,0.9)]
             hover:bg-white/15
-
             "
           >
             {/* TOP */}
@@ -80,18 +82,17 @@ export const Projects = () => {
       </div>
 
       {/* VIEW ALL PROJECTS */}
-      <div className="flex justify-center mt-8">
-        <Link
-          href="/blogs"
-          className="flex items-center gap-2 cursor-pointer group/view"
-        >
-          <span
-            className="
-        relative
+      {showViewMore && (
+        <div className="flex justify-center mt-8">
+          <Link
+            href="/blogs"
+            className="flex items-center gap-2 cursor-pointer group/view"
+          >
+            <span
+              className="relative
         text-base font-medium text-white/70
         transition-colors duration-300
         group-hover/view:text-white
-
         after:content-['']
         after:absolute
         after:left-0
@@ -103,23 +104,22 @@ export const Projects = () => {
         after:origin-left
         after:transition-transform
         after:duration-300
-        group-hover/view:after:scale-x-100
-      "
-          >
-            View more projects
-          </span>
-
-          <ArrowRight
-            size={18}
-            className="
+        group-hover/view:after:scale-x-100"
+            >
+              View more projects
+            </span>
+            <ArrowRight
+              size={18}
+              className="
         text-white/70
         transition-all duration-300
         group-hover/view:text-white
         group-hover/view:translate-x-1
       "
-          />
-        </Link>
-      </div>
+            />
+          </Link>
+        </div>
+      )}
     </section>
   );
 };
