@@ -6,6 +6,13 @@ import BlogLayout from '@/components/mdx/BlogLayout';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import Image from 'next/image';
+import { Calendar, Clock, Eye, Heart } from 'lucide-react';
+
+// 🔥 Read Time Function
+function calculateReadTime(text: string) {
+  const words = text.split(/\s+/).length;
+  return Math.ceil(words / 200);
+}
 
 export default async function BlogPag({
   params,
@@ -20,6 +27,50 @@ export default async function BlogPag({
   return (
     <BlogLayout>
       <div className="w-full overflow-x-hidden">
+        <div className=" mb-8">
+          {/* TITLE */}
+          <h1 className="text-4xl sm:text-5xl font-semibold leading-tight mb-6 text-white">
+            {post.title}
+          </h1>
+
+          {/* META */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-start gap-4 text-zinc-400">
+            {/* LEFT */}
+            <div className="flex items-center gap-3 flex-wrap">
+              <div className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-sm font-medium text-white">
+                H
+              </div>
+
+              <span className="text-white font-medium">Harsh Bhardwaj</span>
+
+              <div className="flex items-center gap-1">
+                <Calendar size={15} className="text-green-400" />
+                <span>Feb 24, 2026</span>
+              </div>
+            </div>
+
+            {/* RIGHT */}
+            <div className="flex items-center gap-5 text-sm">
+              <div className="flex items-center gap-1">
+                <Clock size={15} className="text-blue-400" />
+                {calculateReadTime(post.content)} min read
+              </div>
+
+              <div className="flex items-center gap-1">
+                <Eye size={15} className="text-purple-400" />
+                50
+              </div>
+
+              <div className="flex items-center gap-1">
+                <Heart size={15} className="text-red-400" />
+                10
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ================= CONTENT ================= */}
+
         <MDXRemote
           source={post.content}
           components={{
