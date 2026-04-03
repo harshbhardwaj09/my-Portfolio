@@ -36,6 +36,12 @@ export async function generateMetadata({
         type: 'article',
         ...(post.coverImage && { images: [{ url: post.coverImage }] }),
       },
+      twitter: {
+        card: 'summary_large_image',
+        title: post.title,
+        description,
+        ...(post.coverImage && { images: [post.coverImage] }),
+      },
     };
   } catch {
     return { title: 'Blog Not Found' };

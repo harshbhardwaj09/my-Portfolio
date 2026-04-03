@@ -22,6 +22,12 @@ export const metadata: Metadata = {
       'Read blogs by Harsh Bhardwaj on web development, React, Next.js, TypeScript, and modern frontend & backend technologies.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blogs | Harsh Bhardwaj',
+    description:
+      'Read blogs by Harsh Bhardwaj on web development, React, Next.js, TypeScript, and modern technologies.',
+  },
 };
 
 export default function BlogsPage() {
