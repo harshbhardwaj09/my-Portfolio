@@ -43,7 +43,7 @@ export const blogComponents: MDXComponents = {
 
   blockquote: (props) => (
     <blockquote
-      className="border-l-4 border-teal-400 pl-6 italic my-6 text-gray-300"
+      className="border-l-4 border-teal-400 pl-6 italic my-6 text-gray-300 [&_p:first-of-type::before]:content-none [&_p:last-of-type::after]:content-none"
       {...props}
     />
   ),
@@ -65,7 +65,7 @@ export const blogComponents: MDXComponents = {
   table: (props) => (
     <div className="overflow-x-auto my-8">
       <table
-        className="w-full border border-zinc-700 text-sm [&_tr:hover]:bg-zinc-800/50"
+        className="w-full border border-zinc-700 text-sm [&_tr:hover]:bg-zinc-800/50 [&_th:first-child]:!pl-5 [&_td:first-child]:!pl-5"
         {...props}
       />
     </div>
