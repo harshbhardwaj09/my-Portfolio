@@ -51,6 +51,8 @@ export default function BlogLayout({ children }: Props) {
               prose-li:text-gray-300
               prose-strong:text-white
               prose-blockquote:border-teal-400
+              prose-code:before:content-none
+              prose-code:after:content-none
               max-w-none
             "
             >

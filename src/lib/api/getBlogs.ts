@@ -64,7 +64,7 @@ export async function getBlogs(limit: number = 5) {
      * ✔ Backend load reduction
      * ✔ SEO
      */
-    next: { revalidate: 12 }, // Revalidate every 5 minutes
+    next: { revalidate: 120 }, // Revalidate every 5 minutes
   });
 
   // If backend fails, we throw error.

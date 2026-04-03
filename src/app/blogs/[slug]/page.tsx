@@ -6,9 +6,13 @@ import BlogLayout from '@/components/mdx/BlogLayout';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import Image from 'next/image';
+import BlogImage from '@/components/mdx/BlogImage';
 import { Calendar } from 'lucide-react';
 import type { Metadata } from 'next';
 import BlogEngagement from '@/components/mdx/BlogEngagement';
+
+const IMAGE_FRAME_CLASS =
+  'mx-auto relative w-full max-w-3xl overflow-hidden rounded-2xl aspect-[16/9]';
 
 // 🔍 Dynamic SEO metadata from blog data
 export async function generateMetadata({
@@ -102,15 +106,11 @@ export default async function BlogPag({
 
               return (
                 <div className="my-8 w-full">
-                  <div className="mx-auto w-full max-w-3xl overflow-hidden rounded-2xl bg-zinc-900">
-                    <Image
+                  <div className={IMAGE_FRAME_CLASS}>
+                    <BlogImage
                       src={post.coverImage}
                       alt={post.title || 'Cover'}
-                      width={1600}
-                      height={900}
                       priority
-                      unoptimized
-                      className="w-full h-auto object-contain rounded-2xl"
                     />
                   </div>
                 </div>
@@ -128,14 +128,10 @@ export default async function BlogPag({
 
               return (
                 <div className="my-8 w-full">
-                  <div className="mx-auto w-full max-w-2xl overflow-hidden rounded-2xl bg-zinc-900">
-                    <Image
+                  <div className={IMAGE_FRAME_CLASS}>
+                    <BlogImage
                       src={imageSrc}
                       alt={`Blog Image ${numericIndex + 1}`}
-                      width={1200}
-                      height={800}
-                      unoptimized
-                      className="w-full h-auto object-contain rounded-2xl"
                     />
                   </div>
                 </div>
