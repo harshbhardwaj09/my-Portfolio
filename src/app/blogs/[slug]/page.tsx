@@ -7,11 +7,39 @@ import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import Image from 'next/image';
 import { Calendar, Clock, Eye, Heart } from 'lucide-react';
+import type { Metadata } from 'next';
 
 // 🔥 Read Time Function
 function calculateReadTime(text: string) {
   const words = text.split(/\s+/).length;
   return Math.ceil(words / 200);
+}
+
+// 🔍 Dynamic SEO metadata from blog data
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const id = (await params).slug;
+  try {
+    const post = await getBlogByID(id);
+    const description = post.content?.slice(0, 160).replace(/[#*`\n]/g, '').trim();
+
+    return {
+      title: post.title,
+      description,
+      keywords: post.tags || [],
+      openGraph: {
+        title: post.title,
+        description,
+        type: 'article',
+        ...(post.coverImage && { images: [{ url: post.coverImage }] }),
+      },
+    };
+  } catch {
+    return { title: 'Blog Not Found' };
+  }
 }
 
 export default async function BlogPag({

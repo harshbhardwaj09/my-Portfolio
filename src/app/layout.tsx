@@ -4,13 +4,14 @@ import Navbar from '../components/layout/navBar';
 import SideSocials from '../components/sections/SideSocials';
 import ReactQueryProvider from '../providers/ReactQueryProvider';
 import { Poppins } from 'next/font/google';
+import type { Metadata } from 'next';
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '600', '700', '900'],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: 'Harsh Bhardwaj | Full Stack Developer',
     template: '%s | Harsh Bhardwaj',
@@ -19,7 +20,37 @@ export const metadata = {
     icon: '/profile.png',
     apple: '/profile.png',
   },
-  description: 'Showcasing my projects, blogs, and GitHub contributions.',
+  description:
+    'Portfolio of Harsh Bhardwaj — Full Stack Developer showcasing projects, technical blogs, and GitHub contributions. Built with Next.js, React, and TypeScript.',
+  keywords: [
+    'Harsh Bhardwaj',
+    'Full Stack Developer',
+    'Portfolio',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Web Developer',
+    'Express',
+    'Node.js',
+    'MongoDB',
+    'Tailwind CSS',
+    'Firebase',
+    'Cloudinary',
+    'Resend',
+    'MDX',
+  ],
+  authors: [{ name: 'Harsh Bhardwaj' }],
+  openGraph: {
+    title: 'Harsh Bhardwaj | Full Stack Developer',
+    description:
+      'Portfolio of Harsh Bhardwaj — Full Stack Developer showcasing projects, technical blogs, and GitHub contributions.',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
