@@ -2,15 +2,38 @@
 
 import { useEffect, useState } from 'react';
 import { Skills } from './Skills';
+import { getSiteVisits, incrementSiteVisits } from '@/lib/api/analytics';
 
 export const About = () => {
   const showText = () => {
     setShow(true);
   };
   const [show, setShow] = useState(false);
+  const [siteVisits, setSiteVisits] = useState<number>(0);
 
   useEffect(() => {
     showText();
+
+    const syncVisits = async () => {
+      const visitKey = 'site_visit_counted_v1';
+      const hasCountedVisit = localStorage.getItem(visitKey) === '1';
+
+      try {
+        if (!hasCountedVisit) {
+          const data = await incrementSiteVisits();
+          setSiteVisits(data.count);
+          localStorage.setItem(visitKey, '1');
+          return;
+        }
+
+        const data = await getSiteVisits();
+        setSiteVisits(data.count);
+      } catch {
+        // Ignore analytics errors to avoid blocking UI rendering
+      }
+    };
+
+    void syncVisits();
   }, []);
 
   return (
