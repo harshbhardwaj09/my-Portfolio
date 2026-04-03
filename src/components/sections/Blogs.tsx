@@ -9,14 +9,13 @@ export const Blogs = async ({
   showViewMore?: boolean;
   limit?: number;
 }) => {
-  const likes = [124, 89, 256];
   const data = await getBlogs(limit);
 
   return (
     <div className="my-10 w-full   ml-0 md:ml-8 max-w-5xl flex flex-col gap-6">
       {data.blogs.map(
         (
-          blog: { title?: string; tags?: string[]; _id: string },
+          blog: { title?: string; tags?: string[]; _id: string; likeCount?: number },
           index: number,
         ) => (
           <Link
@@ -92,9 +91,10 @@ export const Blogs = async ({
             </div>
 
             {/* HEART / LIKES */}
-            <div className="absolute bottom-4 right-4 flex items-center gap-1 text-white/50">
-              <Heart size={16} />
-              <span className="text-sm">{likes[index]}</span>
+            <div className="absolute bottom-4 right-4 flex items-center gap-1.5 leading-none text-white/60">
+              <Heart size={15} className="relative -top-px shrink-0 text-rose-300" />
+              <span className="text-sm leading-none">{blog.likeCount ?? 0}</span>
+              <span className="text-sm uppercase tracking-wide leading-none text-white/40">likes</span>
             </div>
           </Link>
         ),

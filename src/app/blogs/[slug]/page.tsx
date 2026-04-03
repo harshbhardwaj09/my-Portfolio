@@ -6,14 +6,9 @@ import BlogLayout from '@/components/mdx/BlogLayout';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import Image from 'next/image';
-import { Calendar, Clock, Eye, Heart } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import type { Metadata } from 'next';
-
-// 🔥 Read Time Function
-function calculateReadTime(text: string) {
-  const words = text.split(/\s+/).length;
-  return Math.ceil(words / 200);
-}
+import BlogEngagement from '@/components/mdx/BlogEngagement';
 
 // 🔍 Dynamic SEO metadata from blog data
 export async function generateMetadata({
@@ -84,22 +79,12 @@ export default async function BlogPag({
             </div>
 
             {/* RIGHT */}
-            <div className="flex items-center gap-5 text-sm">
-              <div className="flex items-center gap-1">
-                <Clock size={15} className="text-blue-400" />
-                {calculateReadTime(post.content)} min read
-              </div>
-
-              <div className="flex items-center gap-1">
-                <Eye size={15} className="text-purple-400" />
-                50
-              </div>
-
-              <div className="flex items-center gap-1">
-                <Heart size={15} className="text-red-400" />
-                10
-              </div>
-            </div>
+            <BlogEngagement
+              blogId={id}
+              content={post.content}
+              initialViewCount={post.viewCount ?? 0}
+              initialLikeCount={post.likeCount ?? 0}
+            />
           </div>
         </div>
 
