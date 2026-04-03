@@ -47,6 +47,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
   },
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@compile_what',
+    title: 'Harsh Bhardwaj | Full Stack Developer',
+    description:
+      'Portfolio of Harsh Bhardwaj — Full Stack Developer showcasing projects, technical blogs, and GitHub contributions.',
+  },
   robots: {
     index: true,
     follow: true,
