@@ -42,6 +42,7 @@ export const Projects = ({
               />
 
               <div className="flex items-center gap-4 text-white/60">
+                {project.github && project.github !== '#' && (
                 <a
                   href={project.github}
                   target="_blank"
@@ -49,6 +50,8 @@ export const Projects = ({
                 >
                   <FaGithub size={18} />
                 </a>
+                )}
+                {project.live && project.live !== '#' && (
                 <a
                   href={project.live}
                   target="_blank"
@@ -56,6 +59,7 @@ export const Projects = ({
                 >
                   <ExternalLink size={18} />
                 </a>
+                )}
               </div>
             </div>
 
@@ -85,7 +89,7 @@ export const Projects = ({
       {showViewMore && (
         <div className="flex justify-center mt-8">
           <Link
-            href="/blogs"
+            href="/projects"
             className="flex items-center gap-2 cursor-pointer group/view"
           >
             <span

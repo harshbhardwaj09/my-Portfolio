@@ -45,10 +45,10 @@ export const projects = [
   },
   {
     title: 'Goswami Tyre Services',
-    desc: 'A freelance project — a business landing page for a local tyre service shop with smooth scroll navigation, service listings, contact section, and fully responsive design. Built and delivered independently for a real client.',
+    desc: 'A freelance under-development project — a business landing page for a local tyre service shop with smooth scroll navigation, service listings, contact section, and fully responsive design. Built and delivered independently for a real client.',
     tech: ['Next.js 16', 'React 19', 'TypeScript 5', 'Tailwind CSS 3', 'React Scroll'],
-    live: '#',
-    github: '#',
+    github: 'https://github.com/harshbhardwaj09/goswami-tyre-service',
+    live:'https://goswami-tyre-service.vercel.app/'
   },
   {
     title: 'Portfolio UI',
@@ -61,7 +61,6 @@ export const projects = [
     title: 'Portfolio BE',
     desc: 'A RESTful backend API for the portfolio website — handles blog management with Cloudinary image uploads, contact form emails via Resend, and MongoDB for data persistence, all built with Express and TypeScript.',
     tech: ['Node.js', 'Express 4', 'TypeScript 5', 'MongoDB', 'Cloudinary', 'Resend'],
-    live: '#',
     github: 'https://github.com/harshbhardwaj09/my-Portfolio-be',
   },
 ];
