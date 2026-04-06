@@ -18,7 +18,7 @@ export const blogComponents: MDXComponents = {
     <h3 className="text-xl font-semibold my-6 text-white" {...props} />
   ),
 
-  p: (props) => <p className="my-4 text-gray-300 leading-7" {...props} />,
+  p: (props) => <p className=" text-gray-300 leading-7" {...props} />,
 
   ul: (props) => (
     <ul className="list-disc ml-6 my-4 text-gray-300" {...props} />

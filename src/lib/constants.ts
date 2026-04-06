@@ -50,19 +50,19 @@ export const projects = [
     github: 'https://github.com/harshbhardwaj09/goswami-tyre-service',
     live:'https://goswami-tyre-service.vercel.app/'
   },
+    {
+    title: 'Portfolio BE',
+    desc: 'RESTful backend API with JWT authentication and blog management. Features: 30-min Bearer tokens, Cloudinary image uploads, MongoDB persistence, input validation, email via Resend, and protected write operations.',
+    tech: ['Node.js', 'Express 4', 'TypeScript 5', 'MongoDB', 'JWT', 'Cloudinary', 'Resend'],
+    github: 'https://github.com/harshbhardwaj09/my-Portfolio-be',
+  },
   {
     title: 'Portfolio UI',
     desc: 'A developer portfolio website with a built-in blog powered by MDX, dynamic project showcase, GitHub contribution calendar, contact form with validation, and Cloudinary-hosted images — all styled with Tailwind CSS.',
     tech: ["Next.js 16", "React 19", "TypeScript 5", "Tailwind CSS 3", "MDX 3", "Cloudinary"],
     live: 'https://my-portfolio-harsh-bhardwaj.vercel.app/',
     github: 'https://github.com/harshbhardwaj09/my-Portfolio.git',
-  },
-  {
-    title: 'Portfolio BE',
-    desc: 'A RESTful backend API for the portfolio website — handles blog management with Cloudinary image uploads, contact form emails via Resend, and MongoDB for data persistence, all built with Express and TypeScript.',
-    tech: ['Node.js', 'Express 4', 'TypeScript 5', 'MongoDB', 'Cloudinary', 'Resend'],
-    github: 'https://github.com/harshbhardwaj09/my-Portfolio-be',
-  },
+  }
 ];
 
 export const navLinks = [
