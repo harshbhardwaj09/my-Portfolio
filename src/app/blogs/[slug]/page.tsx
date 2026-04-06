@@ -127,7 +127,7 @@ export default async function BlogPag({
               if (!imageSrc) return null;
 
               return (
-                <div className="my-8 w-full">
+                <div className="w-full">
                   <div className={IMAGE_FRAME_CLASS}>
                     <BlogImage
                       src={imageSrc}
