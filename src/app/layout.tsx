@@ -46,6 +46,15 @@ export const metadata: Metadata = {
       'Portfolio of Harsh Bhardwaj — Full Stack Developer showcasing projects, technical blogs, and GitHub contributions.',
     type: 'website',
     locale: 'en_IN',
+    url: 'https://my-portfolio-harsh-bhardwaj.vercel.app',
+    images: [
+      {
+        url: 'https://my-portfolio-harsh-bhardwaj.vercel.app/profile.png',
+        width: 1200,
+        height: 1200,
+        alt: 'Harsh Bhardwaj - Full Stack Developer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -53,6 +62,7 @@ export const metadata: Metadata = {
     title: 'Harsh Bhardwaj | Full Stack Developer',
     description:
       'Portfolio of Harsh Bhardwaj — Full Stack Developer showcasing projects, technical blogs, and GitHub contributions.',
+    images: ['https://my-portfolio-harsh-bhardwaj.vercel.app/profile.png'],
   },
   robots: {
     index: true,
