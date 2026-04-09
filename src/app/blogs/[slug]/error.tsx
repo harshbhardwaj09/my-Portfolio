@@ -10,9 +10,12 @@ export default function Error({
   return (
     <BlogLayout>
       <div className="min-h-[45vh] flex flex-col items-center justify-center gap-4 text-center px-4">
-        <h2 className="text-2xl sm:text-3xl font-semibold text-white">Something went wrong</h2>
+        <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+          Something went wrong
+        </h2>
         <p className="text-zinc-300 max-w-xl">
-          We could not load this blog right now. Please reload the page and try again.
+          We could not load this blog right now. Please reload the page and try
+          again.
         </p>
         <button
           type="button"

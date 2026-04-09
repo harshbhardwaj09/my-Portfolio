@@ -23,7 +23,10 @@ export async function generateMetadata({
   const id = (await params).slug;
   try {
     const post = await getBlogByID(id);
-    const description = post.content?.slice(0, 160).replace(/[#*`\n]/g, '').trim();
+    const description = post.content
+      ?.slice(0, 160)
+      .replace(/[#*`\n]/g, '')
+      .trim();
 
     return {
       title: post.title,
