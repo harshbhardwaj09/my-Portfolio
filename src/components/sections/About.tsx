@@ -42,9 +42,9 @@ export const About = () => {
         {/* WIDTH SAME AS BLOG SECTION */}
         <div className="w-full max-w-5xl px-4 text-center relative overflow-hidden">
           {/* HUGE FAINT BACKGROUND TEXT */}
-          <h1 className="absolute inset-0 flex items-start justify-center text-[120px] md:text-[220px] font-black text-white/5 select-none pointer-events-none tracking-tight">
+          <div className="absolute inset-0 flex items-start justify-center text-[120px] md:text-[220px] font-black text-white/5 select-none pointer-events-none tracking-tight">
             HARSH
-          </h1>
+          </div>
 
           {/* MAIN NAME */}
           <h2
