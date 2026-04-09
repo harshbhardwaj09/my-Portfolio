@@ -7,12 +7,30 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Home',
   description:
-    'Harsh Bhardwaj — Full Stack Developer skilled in React, Next.js, TypeScript, Node.js, and MongoDB. Explore my projects, blogs, and GitHub contributions.',
+    'Harsh Bhardwaj portfolio website. Frontend and Full Stack Developer skilled in React, Next.js, TypeScript, express, and MongoDB. Explore projects, blogs, and GitHub contributions.',
+  keywords: [
+    'Harsh Bhardwaj portfolio',
+    'Harsh Bhardwaj frontend developer',
+    'Harsh Bhardwaj full stack developer',
+    'Harsh Bhardwaj developer portfolio',
+    'frontend developer portfolio',
+    'full stack portfolio',
+    'best portfolio website',
+  ],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Harsh Bhardwaj | Full Stack Developer',
     description:
-      'Explore projects, blogs, and GitHub contributions by Harsh Bhardwaj.',
+      'Explore frontend and full stack projects, blogs, and GitHub contributions by Harsh Bhardwaj.',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Harsh Bhardwaj | Full Stack Developer',
+    description:
+      'Harsh Bhardwaj portfolio with frontend and full stack projects, blogs, and contributions.',
   },
 };
 
