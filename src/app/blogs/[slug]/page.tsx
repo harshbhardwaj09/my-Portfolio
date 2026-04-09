@@ -23,7 +23,10 @@ export async function generateMetadata({
   const id = (await params).slug;
   try {
     const post = await getBlogByID(id);
-    const description = post.content?.slice(0, 160).replace(/[#*`\n]/g, '').trim();
+    const description = post.content
+      ?.slice(0, 160)
+      .replace(/[#*`\n]/g, '')
+      .trim();
 
     return {
       title: post.title,
@@ -52,10 +55,11 @@ export default async function BlogPag({
 }: {
   params: { slug: string };
 }) {
-  console.log('params>>', params);
   const id = (await params).slug;
-  console.log('Fetching blog post with ID:', id);
-  const post = await getBlogByID(id);
+  const [post] = await Promise.all([
+    getBlogByID(id),
+    new Promise((resolve) => setTimeout(resolve, 500)),
+  ]);
 
   return (
     <BlogLayout>

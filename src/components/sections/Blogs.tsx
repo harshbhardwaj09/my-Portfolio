@@ -15,7 +15,12 @@ export const Blogs = async ({
     <div className="my-10 w-full   ml-0 md:ml-8 max-w-5xl flex flex-col gap-6">
       {data.blogs.map(
         (
-          blog: { title?: string; tags?: string[]; _id: string; likeCount?: number },
+          blog: {
+            title?: string;
+            tags?: string[];
+            _id: string;
+            likeCount?: number;
+          },
           index: number,
         ) => (
           <Link
@@ -92,9 +97,16 @@ export const Blogs = async ({
 
             {/* HEART / LIKES */}
             <div className="absolute bottom-4 right-4 flex items-center gap-1.5 leading-none text-white/60">
-              <Heart size={15} className="relative -top-px shrink-0 text-rose-300" />
-              <span className="text-sm leading-none">{blog.likeCount ?? 0}</span>
-              <span className="text-sm uppercase tracking-wide leading-none text-white/40">likes</span>
+              <Heart
+                size={15}
+                className="relative -top-px shrink-0 text-rose-300"
+              />
+              <span className="text-sm leading-none">
+                {blog.likeCount ?? 0}
+              </span>
+              <span className="text-sm uppercase tracking-wide leading-none text-white/40">
+                likes
+              </span>
             </div>
           </Link>
         ),
